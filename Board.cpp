@@ -35,7 +35,7 @@ Board Board::getLayer(LayerType layertype) const {
     switch (static_cast<int>(layertype)) {
 
     case static_cast<int>(LayerType::OWN_PLAYERS):
-
+        // code to handle own players layer
         break;
     case static_cast<int>(LayerType::OPPOSING_PLAYERS):
         // Code to handle OPPOSING_PLAYERS layer
@@ -64,5 +64,5 @@ Board Board::getLayer(LayerType layertype) const {
     default:
         // Code to handle unknown layer type
         break;
-}
+    }
 }
