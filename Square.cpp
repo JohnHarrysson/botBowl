@@ -1,7 +1,7 @@
 #include "Square.h"
 
-Square::Square(int x, int y, bool hasItem = false): x_(x), y_(y), hasItem_(hasItem) {}
+Square::Square(int x, int y, bool hasOwnPlayer): x_(x), y_(y), hasOwnPlayer_(hasOwnPlayer) {}
 
-void Square::setItem() {
-    hasItem_ = !hasItem_;
+void Square::setHasOwnPlayer() {
+    hasOwnPlayer_ = !hasOwnPlayer_;
 }

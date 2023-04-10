@@ -1,5 +1,6 @@
 #include <vector>
 #include "Square.h"
+#include "Aliases.h"
 
 #ifndef BOARD_H
 #define BOARD_H
@@ -14,15 +15,20 @@ enum class LayerType {
     OPPOSING_SCORING,
     OWN_TACKLEZONES,
     OPPOSING_TACKLEZONES,
-    PLAYER_TYPES
+    OWN_PLAYER_TYPES,
+    OPPOSING_PLAYER_TYPES,
+    OWN_PLAYER_STATES,
+    OPPOSING_PLAYER_STATES,
+    GAME_INFO
 };
 
 class Board {
     public:
-        Board::Board(int x, int y);
+        Board::Board();
 
-        int getWidth() const;
-        int getHeight() const;
+        constexpr static int boardHeight{26};
+        constexpr static int boardWidth{15};
+        constexpr static int nrLayers{14};
 
         Square& getSquare(int x, int y);
         const Square& getSquare(int x, int y) const;
@@ -30,8 +36,7 @@ class Board {
         Board getLayer(enum LayerType) const;
     
     private:
-        const int x_, y_;
-        std::vector<std::vector<Square>> board_;
+        BoardTensor board_;
 };
 
 #endif

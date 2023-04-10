@@ -2,41 +2,12 @@
 #include "Square.h"
 #include "Board.h"
 
-Board::Board(int x, int y) : x_(x), y_(y) {
-
-    std::vector<std::vector<Square>> board_{x, std::vector<Square>{y, Square(0,0)}};
-    for (int i = 0; i < x; i++)
-    {
-        for (int j = 0; j < y; j++)
-        {
-            board_[i][j] = Square(i,j);
-        }
-    }
-}
-
-int Board::getWidth() const {
-    return x_;
-}
-
-int Board::getHeight() const {
-    return y_;
-}
-
-Square& Board::getSquare(int x, int y) {
-    return board_[x][y];
-} 
-
-const Square& Board::getSquare(int x, int y) const {
-    return board_[x][y];
-}
+Board::Board() : board_(boardWidth, std::vector<std::vector<float>>(boardHeight, std::vector<float>(nrLayers, 0.0f))) {}
 
 Board Board::getLayer(LayerType layertype) const {
-
     switch (static_cast<int>(layertype)) {
-
     case static_cast<int>(LayerType::OWN_PLAYERS):
-        // code to handle own players layer
-        break;
+       break;
     case static_cast<int>(LayerType::OPPOSING_PLAYERS):
         // Code to handle OPPOSING_PLAYERS layer
         break;
@@ -59,6 +30,18 @@ Board Board::getLayer(LayerType layertype) const {
         // Code to handle OWN_TACKLEZONES layer
         break;
     case static_cast<int>(LayerType::OPPOSING_TACKLEZONES):
+        // Code to handle OPPOSING_TACKLEZONES layer
+        break;
+    case static_cast<int>(LayerType::OWN_PLAYER_TYPES):
+        // Code to handle OPPOSING_TACKLEZONES layer
+        break;
+    case static_cast<int>(LayerType::OPPOSING_PLAYER_TYPES):
+        // Code to handle OPPOSING_TACKLEZONES layer
+        break;
+    case static_cast<int>(LayerType::OWN_PLAYER_STATES):
+        // Code to handle OPPOSING_TACKLEZONES layer
+        break;
+    case static_cast<int>(LayerType::OPPOSING_PLAYER_STATES):
         // Code to handle OPPOSING_TACKLEZONES layer
         break;
     default:
