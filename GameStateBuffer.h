@@ -1,3 +1,6 @@
+#ifndef GAMESTATEBUFFER_H
+#define GAMESTATEBUFFER_H
+
 #include <vector>
 #include <cassert>
 
@@ -29,3 +32,5 @@ private:
     size_t tail;
     size_t count;
 };
+
+#endif
