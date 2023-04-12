@@ -1,11 +1,15 @@
 #include <vector>
-#include "Square.h"
 #include "Board.h"
 
 Board::Board() : board_(boardWidth, std::vector<std::vector<float>>(boardHeight, std::vector<float>(nrLayers, 0.0f))) {}
 
+Board Board::updateBoardState(int x, int y, int layer, float value) const {
+
+}
+
 Board Board::getLayer(LayerType layertype) const {
     switch (static_cast<int>(layertype)) {
+
     case static_cast<int>(LayerType::OWN_PLAYERS):
        break;
     case static_cast<int>(LayerType::OPPOSING_PLAYERS):
@@ -33,19 +37,19 @@ Board Board::getLayer(LayerType layertype) const {
         // Code to handle OPPOSING_TACKLEZONES layer
         break;
     case static_cast<int>(LayerType::OWN_PLAYER_TYPES):
-        // Code to handle OPPOSING_TACKLEZONES layer
+        // Code to handle oWN_PLAYER_TYPES layer
         break;
     case static_cast<int>(LayerType::OPPOSING_PLAYER_TYPES):
-        // Code to handle OPPOSING_TACKLEZONES layer
+        // Code to handle OPPOSING PLAYER TYPES layer
         break;
     case static_cast<int>(LayerType::OWN_PLAYER_STATES):
-        // Code to handle OPPOSING_TACKLEZONES layer
+        // Code to handle OWN PLAYER STATES layer
         break;
     case static_cast<int>(LayerType::OPPOSING_PLAYER_STATES):
-        // Code to handle OPPOSING_TACKLEZONES layer
+        // Code to handle OPPOSING PLAYER STATES layer
         break;
     default:
-        // Code to handle unknown layer type
+    // Some throw I guess.
         break;
     }
 }

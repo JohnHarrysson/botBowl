@@ -1,5 +1,4 @@
 #include <vector>
-#include "Square.h"
 #include "Aliases.h"
 
 #ifndef BOARD_H
@@ -30,10 +29,9 @@ class Board {
         constexpr static int boardWidth{15};
         constexpr static int nrLayers{14};
 
-        Square& getSquare(int x, int y);
-        const Square& getSquare(int x, int y) const;
-
         Board getLayer(enum LayerType) const;
+
+        Board updateBoardState(int x, int y, int layer, float value) const;
     
     private:
         BoardTensor board_;
