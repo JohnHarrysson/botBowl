@@ -1,5 +1,6 @@
 #include <vector>
 #include "Aliases.h"
+#include "GameStateBuffer.h"
 
 #ifndef BOARD_H
 #define BOARD_H
@@ -29,9 +30,11 @@ class Board {
         constexpr static int boardWidth{15};
         constexpr static int nrLayers{14};
 
+        void storeBoardState(CircularBuffer<BoardTensor>& gameStateBuffer, BoardTensor const currentState) const;
+
         Board getLayer(enum LayerType) const;
 
-        Board updateBoardState(int x, int y, int layer, float value) const;
+        void updateBoardState(BoardTensor& currentState, int x, int y, LayerType layer, float value);
     
     private:
         BoardTensor board_;

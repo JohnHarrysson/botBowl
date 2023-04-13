@@ -2,20 +2,20 @@
 
 template<typename T>
 void CircularBuffer<T>::push(const T& value) {
-    buffer[head] = value;
-    head = (head + 1) % buffer.size();
-    if (count < buffer.size()) {
-        count++;
+    buffer_[head_] = value;
+    head_ = (head_ + 1) % buffer_.size();
+    if (count_ < buffer_.size()) {
+        count_++;
     } else {
-        tail = (tail + 1) % buffer.size();
+        tail_ = (tail_ + 1) % buffer_.size();
     }
 }
 
 template<typename T>
 T CircularBuffer<T>::pop() {
     assert(!isEmpty());
-    T value = buffer[tail];
-    tail = (tail + 1) % buffer.size();
-    count--;
+    T value = buffer_[tail_];
+    tail_ = (tail_ + 1) % buffer_.size();
+    count_--;
     return value;
 }

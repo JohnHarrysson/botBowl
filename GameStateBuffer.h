@@ -8,29 +8,29 @@ template<typename T>
 class CircularBuffer {
 public:
     explicit CircularBuffer(size_t size)
-        : buffer(size), head(0), tail(0), count(0) {}
+        : buffer_(size), head_(0), tail_(0), count_(0) {}
 
     void push(const T& value);
 
     T pop();
 
     bool isEmpty() const {
-        return count == 0;
+        return count_ == 0;
     }
 
     bool isFull() const {
-        return count == buffer.size();
+        return count_ == buffer_.size();
     }
 
     size_t size() const {
-        return count;
+        return count_;
     }
 
 private:
-    std::vector<T> buffer;
-    size_t head;
-    size_t tail;
-    size_t count;
+    std::vector<T> buffer_;
+    size_t head_;
+    size_t tail_;
+    size_t count_;
 };
 
 #endif
