@@ -22,6 +22,7 @@ class Player {
         void setHuman(bool isHuman) { isHuman_ = isHuman; }
         void setHasMoved(bool hasMoved) { hasMoved_ = hasMoved; }
 
+        ~Player() {}
 
     private:
         std::string name_;

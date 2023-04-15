@@ -1,4 +1,3 @@
-#include <vector>
 #include "Board.h"
 
 Board::Board() : board_(boardWidth, std::vector<std::vector<float>>(boardHeight, std::vector<float>(nrLayers, 0.0f))) {}

@@ -24,7 +24,8 @@ enum class LayerType {
 
 class Board {
     public:
-        Board::Board();
+        Board();
+        ~Board() {}
 
         constexpr static int boardHeight{26};
         constexpr static int boardWidth{15};
@@ -32,7 +33,7 @@ class Board {
 
         void storeBoardState(CircularBuffer<BoardTensor>& gameStateBuffer, BoardTensor const currentState) const;
 
-        Board getLayer(enum LayerType) const;
+        Board getLayer(LayerType) const;
 
         void updateBoardState(BoardTensor& currentState, int x, int y, LayerType layer, float value);
     
