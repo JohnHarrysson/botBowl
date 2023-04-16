@@ -6,6 +6,6 @@
 #include "PlayerFactory.h"
 
 using BoardTensor = std::vector<std::vector<std::vector<float>>>;
-using PlayerTypeMap = std::unordered_map<TeamType, std::unordered_map<PlayerType, PlayerStats>>>
+using PlayerTypeMap = std::unordered_map<TeamType, std::unordered_map<PlayerType, PlayerFactory::PlayerStats>>>
 
 #endif

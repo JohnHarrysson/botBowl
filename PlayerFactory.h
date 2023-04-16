@@ -5,6 +5,7 @@
 #include "Team.h"
 #include "Aliases.h"
 
+//TODO: add more types with more teams
 enum class PlayerType {
     Lineman,
     Blitzer,
@@ -26,16 +27,18 @@ class PlayerFactory {
         
     private:
         PlayerTypeMap m_playerTypeMap;
-        struct PlayerStats
-        {
-           std::string name;
-           int strength;
-           int agility;
-           int movement;
-           int armor;
-           int pass;
+        struct PlayerStats {
+            int strength;
+            int agility;
+            int movement;
+            int armor;
+            int pass;
+            std::unordered_set<GeneralSkill> generalSkills;
+            std::unordered_set<StrengthSkill> strengthSkills;
+            std::unordered_set<AgilitySkill> agilitySkills;
+            std::unordered_set<PassingSkill> passingSkills;
+            std::unordered_set<MutationSkill> mutationSkills;
         };
-        
 }
 
 #endif
