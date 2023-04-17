@@ -1,6 +1,6 @@
 #include "Player.h"
 #include <vector>
 
-Player::Player(const std::string& name, int strength, int agility, int armor, int movement, bool isHuman) :
-    name_(name), strength_(strength), agility_(agility), armor_(armor), movement_(movement), isHuman_(isHuman),
-hasMoved_(false) {}
+Player::Player(const std::string& name, int strength, int agility, int armor, int movement, int pass,  std::unordered_set<StrengthSkill> strengthSkills, std::unordered_set<AgilitySkill> agilitySkills, std::unordered_set<GeneralSkill> generalSkills, std::unordered_set<PassingSkill> passingSkills, std::unordered_set<MutationSkill> mutationSkills) :
+    name_(name), strength_(strength), agility_(agility), armor_(armor), movement_(movement), pass_(pass)
+    strengthSkills_(strengthSkills), agilitySkills_(agilitySkills), generalSkills_(generalSkills), passingSkills_(passingSkills), mutationSkills_(mutationSkills) {}

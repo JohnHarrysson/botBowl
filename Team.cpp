@@ -1,5 +1,5 @@
 #include "Team.h"
 
 
-Team::Team(TeamType teamName, std::string name) : teamName_(teamName), name_(name) {}
-Team::Team(TeamType teamName, std::string name, std::vector<Player&> players) : teamName_(teamName), name_(name), players_(players) {}
+Team::Team(TeamType teamType, std::string name) : teamType_(teamType), name_(name) {}
+Team::Team(TeamType teamType, std::string name, std::vector<Player&> players) : teamType_(teamType), name_(name), players_(players) {}

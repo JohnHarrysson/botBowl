@@ -2,10 +2,15 @@
 #define SKILLS_H
 
 //TODO: add more skills
+//TODO: add extraordinary skill category (regen, bone head, etc)
 enum class GeneralSkill{
     Block,
     Sure_Hands,
-    Thick_Skull
+    Thick_Skull,
+    Regeneration,
+    Really_Stupid,
+    Bone_Head,
+    Animosity
 }
 
 enum class StrengthSkill {

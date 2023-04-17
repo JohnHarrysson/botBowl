@@ -23,13 +23,13 @@ enum class TeamType {
 class Team {
 
 private:
-const TeamType teamName_;
+const TeamType teamType_;
 const std::string name_;
 std::vector<Player&> players_;
 
 public:
-    Team(TeamType teamName, std::string name);
-    Team(TeamType teamName, std::string name, std::vector<Player&> players);
+    Team(TeamType teamType, std::string name);
+    Team(TeamType teamType, std::string name, std::vector<Player&> players);
     ~Team() {}
 
     std::string getName() const { return name_; }
