@@ -11,23 +11,23 @@ enum class GeneralSkill{
     Really_Stupid,
     Bone_Head,
     Animosity
-}
+};
 
 enum class StrengthSkill {
     Mighty_Blow
-}
+};
 
 enum class AgilitySkill {
     Dodge,
     Catch
-}
+};
 
 enum class PassingSkill {
     Pass
-}
+};
 
 enum class MutationSkill {
     Claw
-}
+};
 
 #endif

@@ -3,6 +3,7 @@
 
 #include <string>
 #include "Player.h"
+#include "PlayerFactory.h"
 
 enum class TeamType {
     Humans,
@@ -17,8 +18,20 @@ enum class TeamType {
     Imperial_Nobility,
     Skaven,
     Nurgle
-}
+};
 
+class TeamData {
+public:
+    TeamData(const std::unordered_map<PlayerType, PlayerStats>& playerTypeToStats) 
+        : playerTypeToStats_(playerTypeToStats) {}
+
+    const PlayerStats& getPlayerStats(PlayerType playerType) const {
+        return playerTypeToStats_.at(playerType);
+    }
+
+private:
+    std::unordered_map<PlayerType, PlayerStats> playerTypeToStats_;
+};
 
 class Team {
 
@@ -38,6 +51,8 @@ public:
     void setPlayers(std::vector<Player&> players) { players_ = players; }
 
     void addPlayer(Player& player) { players_.push_back(player); }
+
+    void buyPlayer(PlayerType);
     
 };
 
