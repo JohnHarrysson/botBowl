@@ -30,16 +30,31 @@ struct PlayerStats {
     std::unordered_set<MutationSkill> mutationSkills;
 };
 
+class PlayerTypeData {
+public:
+    PlayerTypeData(const Positionals& playerTypeToStats) 
+        : playerTypeToStats_(playerTypeToStats) {}
+
+    const PlayerStats& getPlayerStats(PlayerType playerType) const {
+        return playerTypeToStats_.at(playerType);
+    }
+
+private:
+    Positionals playerTypeToStats_;
+};
+
 class PlayerFactory {
     public:
         explicit PlayerFactory();
         ~PlayerFactory() {}
-        Player createPlayer(TeamType teamType, PlayerType playerType);
+
+        Player createPlayer(TeamType teamType, PlayerType playerType, std::string name);
         
         
         
     private:
-        std::unordered_map<TeamType, TeamData> teamTypeToTeamData_;
+        static std::unordered_map<TeamType, PlayerTypeData> initializePlayerTypeData();
+        std::unordered_map<TeamType, PlayerTypeData> teamTypeToPlayerTypeData_;
     };
 
 #endif

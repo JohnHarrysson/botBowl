@@ -20,18 +20,7 @@ enum class TeamType {
     Nurgle
 };
 
-class TeamData {
-public:
-    TeamData(const std::unordered_map<PlayerType, PlayerStats>& playerTypeToStats) 
-        : playerTypeToStats_(playerTypeToStats) {}
 
-    const PlayerStats& getPlayerStats(PlayerType playerType) const {
-        return playerTypeToStats_.at(playerType);
-    }
-
-private:
-    std::unordered_map<PlayerType, PlayerStats> playerTypeToStats_;
-};
 
 class Team {
 
@@ -39,16 +28,17 @@ private:
 const TeamType teamType_;
 const std::string name_;
 std::vector<Player&> players_;
+PlayerFactory& playerFactory_;
 
 public:
-    Team(TeamType teamType, std::string name);
-    Team(TeamType teamType, std::string name, std::vector<Player&> players);
+    Team(TeamType teamType, std::string name, PlayerFactory& playerFactory);
     ~Team() {}
 
     std::string getName() const { return name_; }
     std::vector<Player&> getPlayers() const { return players_; }
 
     void setPlayers(std::vector<Player&> players) { players_ = players; }
+    std::string setPlayerName();
 
     void addPlayer(Player& player) { players_.push_back(player); }
 
