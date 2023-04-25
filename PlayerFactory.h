@@ -32,15 +32,20 @@ struct PlayerStats {
 
 class PlayerTypeData {
 public:
-    PlayerTypeData(const Positionals& playerTypeToStats) 
-        : playerTypeToStats_(playerTypeToStats) {}
+    PlayerTypeData(const Positionals& playerTypeToStats, std::unordered_map<PlayerType, int> maximumAllowedPlayertype) 
+        : playerTypeToStats_(playerTypeToStats), maximumAllowedPlayerType_(maximumAllowedPlayertype) {}
 
     const PlayerStats& getPlayerStats(PlayerType playerType) const {
         return playerTypeToStats_.at(playerType);
     }
 
+    const int getMaximumAllowedPlayerType(PlayerType playerType) const {
+        return maximumAllowedPlayerType_.at(playerType);
+    }
+
 private:
     Positionals playerTypeToStats_;
+    std::unordered_map<PlayerType, int> maximumAllowedPlayerType_;
 };
 
 class PlayerFactory {
@@ -48,6 +53,7 @@ class PlayerFactory {
         explicit PlayerFactory();
         ~PlayerFactory() {}
 
+        const int getMaximumAllowedPlayerType(TeamType teamType, PlayerType playerType) const;
         Player createPlayer(TeamType teamType, PlayerType playerType, std::string name);
         
         
