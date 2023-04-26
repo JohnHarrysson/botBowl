@@ -2,36 +2,21 @@
 #define TEAM_H
 
 #include <string>
+#include "TeamTypes.h"
+#include "PlayerTypes.h"
 #include "Player.h"
 #include "PlayerFactory.h"
-
-enum class TeamType {
-    Humans,
-    Orcs,
-    Elven_Union,
-    Dark_Elves,
-    Black_Orcs,
-    OWA,
-    Chaos_Warriors,
-    Chaos_Renegades,
-    Dwarfs,
-    Imperial_Nobility,
-    Skaven,
-    Nurgle
-};
-
-
 
 class Team {
 
 private:
-const TeamType teamType_;
-const std::string name_;
-std::vector<Player&> players_;
-PlayerFactory& playerFactory_;
+    const TeamType teamType_;
+    const std::string name_;
+    std::vector<Player&> players_;
+    PlayerFactory playerFactory_;
 
 public:
-    Team(TeamType teamType, std::string name, PlayerFactory& playerFactory);
+    Team(TeamType teamType, std::string name, const PlayerFactory& playerFactory);
     ~Team() {}
 
     std::string getName() const { return name_; }

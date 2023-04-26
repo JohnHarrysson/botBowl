@@ -1,6 +1,5 @@
-#include "Aliases.h"
-#include <unordered_map>
 #include "PlayerFactory.h"
+
 
 PlayerFactory::PlayerFactory() : teamTypeToPlayerTypeData_(initializePlayerTypeData()) {}
       
@@ -62,7 +61,7 @@ Player PlayerFactory::createPlayer(TeamType teamType, PlayerType playerType, std
     const PlayerTypeData& playerTypeData = teamTypeToPlayerTypeData_.at(teamType);
     const PlayerStats& stats = playerTypeData.getPlayerStats(playerType);
 
-    Player player(name, stats.strength, stats.agility, stats.armor, stats.movement, stats.pass, stats.strengthSkills, stats.agilitySkills, stats.generalSkills, stats.passingSkills, stats.mutationSkills);
+    Player player(name, stats);
 
     return player;
 }

@@ -3,9 +3,9 @@
 
 #include <vector>
 #include <string>
-#include <unordered_set>
 #include <cassert>
 #include "Skills.h"
+#include "Stats.h"
 #include "Wounds.h"
 
 class Player
