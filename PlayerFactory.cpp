@@ -43,12 +43,12 @@ std::unordered_map<TeamType, PlayerTypeData> PlayerFactory::initializePlayerType
     PlayerTypeData orcPlayerTypeData(orcPositionals, orcMaximumAllowedPlayerTypes);
             
 
-    teamTypeToPlayerTypeData[TeamType::Humans] = humanPlayerTypeData;
-    teamTypeToPlayerTypeData[TeamType::Orcs] = orcPlayerTypeData;
+    teamTypeToPlayerTypeData.insert({TeamType::Humans, humanPlayerTypeData});
+    teamTypeToPlayerTypeData.insert({TeamType::Orcs, orcPlayerTypeData});
 
     return teamTypeToPlayerTypeData;
 }
-
+/*
 const int PlayerFactory::getMaximumAllowedPlayerType(TeamType teamType, PlayerType playerType) const {
     const PlayerTypeData& playerTypeData = teamTypeToPlayerTypeData_.at(teamType);
     int maximumAllowedPlayerType = playerTypeData.getMaximumAllowedPlayerType(playerType);
@@ -65,3 +65,4 @@ Player PlayerFactory::createPlayer(TeamType teamType, PlayerType playerType, std
 
     return player;
 }
+*/

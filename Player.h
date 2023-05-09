@@ -24,26 +24,26 @@ public:
     void setArmor(int armor) { playerStats_.armor = armor; }
     void setMovement(int movement) { playerStats_.movement = movement; }
 
-    const std::unordered_set<StrengthSkill> &getStrengthSkills() const { return playerStats_.strengthSkills; }
-    void setStrengthSkills(const std::unordered_set<StrengthSkill> &skills) { playerStats_.strengthSkills = skills; }
+    const std::unordered_set<StrengthSkill>& getStrengthSkills();
+    void setStrengthSkills(const std::unordered_set<StrengthSkill> &skills);
 
-    const std::unordered_set<AgilitySkill> &getAgilitySkills() const { return playerStats_.agilitySkills; }
-    void setAgilitySkills(const std::unordered_set<AgilitySkill> &skills) { playerStats_.agilitySkills = skills; }
+    const std::unordered_set<AgilitySkill> &getAgilitySkills();
+    void setAgilitySkills(const std::unordered_set<AgilitySkill> &skills);
 
-    const std::unordered_set<GeneralSkill> &getGeneralSkills() const { return playerStats_.generalSkills; }
-    void setGeneralSkills(const std::unordered_set<GeneralSkill> &skills) { playerStats_.generalSkills = skills; }
+    const std::unordered_set<GeneralSkill> &getGeneralSkills() const;
+    void setGeneralSkills(const std::unordered_set<GeneralSkill> &skills);
 
-    const std::unordered_set<PassingSkill> &getPassingSkills() const { return playerStats_.passingSkills; }
-    void setPassingSkills(const std::unordered_set<PassingSkill> &skills) { playerStats_.passingSkills = skills; }
+    const std::unordered_set<PassingSkill> &getPassingSkills() const;
+    void setPassingSkills(const std::unordered_set<PassingSkill> &skills);
 
-    const std::unordered_set<MutationSkill> &getMutationSkills() const { return playerStats_.mutationSkills; }
-    void setMutationSkills(const std::unordered_set<MutationSkill> &skills) { playerStats_.mutationSkills = skills; }
+    const std::unordered_set<MutationSkill> &getMutationSkills() const;
+    void setMutationSkills(const std::unordered_set<MutationSkill> &skills);
 
-    const std::vector<Wounds> getCurrentWounds() { return currentWounds_; }
-    void setCurrentWounds(Wounds newWound) { currentWounds_.push_back(newWound); }
+    const std::vector<Wounds> getCurrentWounds();
+    void setCurrentWounds(Wounds newWound);
 
-    const std::vector<Wounds> getLastingWounds() { return lastingWounds_; }
-    void setLastingWounds(const Wounds& newLastingWound) { lastingWounds_.push_back(newLastingWound); }
+    const std::vector<Wounds> getLastingWounds();
+    void setLastingWounds(const Wounds& newLastingWound);
     ~Player() {}
 
 private:
