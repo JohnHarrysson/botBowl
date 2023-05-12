@@ -1,0 +1,24 @@
+cmake_minimum_required(VERSION 3.10)
+project(BotBowl)
+
+# C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Source files
+set(SOURCE_FILES
+    main.cpp
+    Team.cpp
+    Player.cpp
+    PlayerFactory.cpp
+    GameStateBuffer.cpp
+    Board.cpp
+)
+
+# Include directories
+include_directories(
+    ${CMAKE_SOURCE_DIR}/include
+)
+
+# Executable
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
