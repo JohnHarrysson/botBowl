@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/john/Documents/botbowl/build",
+  "command": "/usr/bin/g++  -I/home/john/Documents/botbowl/include -g -o CMakeFiles/BotBowl.dir/src/Board.cpp.o -c /home/john/Documents/botbowl/src/Board.cpp",
+  "file": "/home/john/Documents/botbowl/src/Board.cpp"
+},
+{
+  "directory": "/home/john/Documents/botbowl/build",
+  "command": "/usr/bin/g++  -I/home/john/Documents/botbowl/include -g -o CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o -c /home/john/Documents/botbowl/src/GameStateBuffer.cpp",
+  "file": "/home/john/Documents/botbowl/src/GameStateBuffer.cpp"
+},
+{
+  "directory": "/home/john/Documents/botbowl/build",
+  "command": "/usr/bin/g++  -I/home/john/Documents/botbowl/include -g -o CMakeFiles/BotBowl.dir/src/Player.cpp.o -c /home/john/Documents/botbowl/src/Player.cpp",
+  "file": "/home/john/Documents/botbowl/src/Player.cpp"
+},
+{
+  "directory": "/home/john/Documents/botbowl/build",
+  "command": "/usr/bin/g++  -I/home/john/Documents/botbowl/include -g -o CMakeFiles/BotBowl.dir/src/PlayerFactory.cpp.o -c /home/john/Documents/botbowl/src/PlayerFactory.cpp",
+  "file": "/home/john/Documents/botbowl/src/PlayerFactory.cpp"
+},
+{
+  "directory": "/home/john/Documents/botbowl/build",
+  "command": "/usr/bin/g++  -I/home/john/Documents/botbowl/include -g -o CMakeFiles/BotBowl.dir/src/Team.cpp.o -c /home/john/Documents/botbowl/src/Team.cpp",
+  "file": "/home/john/Documents/botbowl/src/Team.cpp"
+},
+{
+  "directory": "/home/john/Documents/botbowl/build",
+  "command": "/usr/bin/g++  -I/home/john/Documents/botbowl/include -g -o CMakeFiles/BotBowl.dir/src/main.cpp.o -c /home/john/Documents/botbowl/src/main.cpp",
+  "file": "/home/john/Documents/botbowl/src/main.cpp"
+}
+]
