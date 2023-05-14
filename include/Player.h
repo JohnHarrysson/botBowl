@@ -24,6 +24,12 @@ public:
     void setArmor(int armor) { playerStats_.armor = armor; }
     void setMovement(int movement) { playerStats_.movement = movement; }
 
+    const bool getMissNextGame() const { return playerStats_.isDead; }
+    const bool getIsDead() const { return playerStats_.isDead; }
+
+    void setMissNextGame(bool willMissNextGame) { playerStats_.missNextGame = willMissNextGame; }
+    void setIsDead(bool isDead) { playerStats_.isDead = isDead; }
+
     const std::unordered_set<StrengthSkill> &getStrengthSkills() const;
     void setStrengthSkills(const std::unordered_set<StrengthSkill> &skills);
 
@@ -39,19 +45,21 @@ public:
     const std::unordered_set<MutationSkill> &getMutationSkills() const;
     void setMutationSkills(const std::unordered_set<MutationSkill> &skills);
 
-    const std::vector<Wounds> getCurrentWounds();
-    void setCurrentWounds(Wounds newWound);
+    const std::vector<Wound> getCurrentWounds();
+    void setCurrentWounds(Wound newWound);
 
-    const std::vector<Wounds> getLastingWounds();
-    void setLastingWounds(const Wounds& newLastingWound);
+    const std::vector<Wound> getLastingWounds();
+    void setLastingWounds(const Wound newLastingWound);
+
+    void applyWoundEffect(Wound wound);
     ~Player() {}
 
 private:
     std::string name_;
     PlayerStats playerStats_;
     
-    std::vector<Wounds> currentWounds_;
-    std::vector<Wounds> lastingWounds_;
+    std::vector<Wound> currentWounds_;
+    std::vector<Wound> lastingWounds_;
 };
 
 #endif

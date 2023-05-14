@@ -15,6 +15,8 @@ struct PlayerStats {
     std::unordered_set<AgilitySkill> agilitySkills;
     std::unordered_set<PassingSkill> passingSkills;
     std::unordered_set<MutationSkill> mutationSkills;
+    bool missNextGame = false;
+    bool isDead = false;
 };
 
 #endif

@@ -2,7 +2,7 @@
 #include "Team.h"
 
 
-Team::Team(TeamType teamType, std::string name, const PlayerFactory& playerFactory) : teamType_(teamType), name_(name), playerFactory_(playerFactory) {}
+Team::Team(TeamType teamType, std::string name, const PlayerFactory& playerFactory) : teamType_(teamType), teamName_(name), playerFactory_(playerFactory) {}
 
 std::string Team::setPlayerName() {
     std::string name;
