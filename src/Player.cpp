@@ -31,12 +31,12 @@
             case WoundType::DAMAGED_BACK:
                 this->setCurrentWounds(woundType);
                 this->setMissNextGame(true);
-                this->setLastingWounds(WoundType::NIGGLING_INJURY);
+                this->setLastingWounds(Wound(WoundType::NIGGLING_INJURY));
                 break;
             case WoundType::SMASHED_KNEE:
                 this->setCurrentWounds(woundType);
                 this->setMissNextGame(true);
-                this->setLastingWounds(WoundType::NIGGLING_INJURY);
+                this->setLastingWounds(Wound(WoundType::NIGGLING_INJURY));
                 break;
             case WoundType::SMASHED_ANKLE:
                 this->setCurrentWounds(wound);

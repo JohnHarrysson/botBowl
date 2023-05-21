@@ -9,8 +9,6 @@
 
 using Positionals = std::unordered_map<PlayerType, PlayerStats>;
 
-//TODO: add more types with more teams
-
 
 class PlayerTypeData {
 public:
@@ -37,10 +35,13 @@ class PlayerFactory {
 
         const int getMaximumAllowedPlayerType(TeamType teamType, PlayerType playerType) const;
         Player createPlayer(TeamType teamType, PlayerType playerType, std::string name);
+        std::vector<Player> createStartingTeam(TeamType teamType);
         
     private:
         static std::unordered_map<TeamType, PlayerTypeData> initializePlayerTypeData();
+        static std::unordered_map<TeamType, std::vector<PlayerType>> initializeStartingTeams();
         std::unordered_map<TeamType, PlayerTypeData> teamTypeToPlayerTypeData_;
+        std::unordered_map<TeamType, std::vector<PlayerType>> teamTypeToStartingTeams_;
 };
 
 #endif

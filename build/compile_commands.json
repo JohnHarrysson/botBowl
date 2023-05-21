@@ -6,6 +6,11 @@
 },
 {
   "directory": "/home/john/Documents/botbowl/build",
+  "command": "/usr/bin/g++  -I/home/john/Documents/botbowl/include -g -o CMakeFiles/BotBowl.dir/src/Driver.cpp.o -c /home/john/Documents/botbowl/src/Driver.cpp",
+  "file": "/home/john/Documents/botbowl/src/Driver.cpp"
+},
+{
+  "directory": "/home/john/Documents/botbowl/build",
   "command": "/usr/bin/g++  -I/home/john/Documents/botbowl/include -g -o CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o -c /home/john/Documents/botbowl/src/GameStateBuffer.cpp",
   "file": "/home/john/Documents/botbowl/src/GameStateBuffer.cpp"
 },

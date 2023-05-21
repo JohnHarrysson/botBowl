@@ -47,6 +47,7 @@ public:
 
     const std::vector<Wound> getCurrentWounds();
     void setCurrentWounds(Wound newWound);
+    void clearCurrentWounds() { currentWounds_.clear(); }
 
     const std::vector<Wound> getLastingWounds();
     void setLastingWounds(const Wound newLastingWound);

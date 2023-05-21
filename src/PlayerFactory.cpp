@@ -1,7 +1,8 @@
 #include "PlayerFactory.h"
+#include "DefaultPlayerNames.h"
 
 
-PlayerFactory::PlayerFactory() : teamTypeToPlayerTypeData_(initializePlayerTypeData()) {}
+PlayerFactory::PlayerFactory() : teamTypeToPlayerTypeData_(initializePlayerTypeData()), teamTypeToStartingTeams_(initializeStartingTeams()) {}
       
 
 std::unordered_map<TeamType, PlayerTypeData> PlayerFactory::initializePlayerTypeData() {
@@ -49,6 +50,43 @@ std::unordered_map<TeamType, PlayerTypeData> PlayerFactory::initializePlayerType
     return teamTypeToPlayerTypeData;
 }
 
+std::unordered_map<TeamType, std::vector<PlayerType>> PlayerFactory::initializeStartingTeams() {
+    std::unordered_map<TeamType, std::vector<PlayerType>> teamTypeToStartingTeams;
+    
+    std::vector humanStartingteam {
+        PlayerType::Lineman,
+        PlayerType::Lineman,
+        PlayerType::Lineman,
+        PlayerType::Lineman,
+        PlayerType::Blitzer,
+        PlayerType::Blitzer,
+        PlayerType::Blitzer,
+        PlayerType::Blitzer,
+        PlayerType::Thrower,
+        PlayerType::Catcher,
+        PlayerType::Ogre
+    };
+
+    std::vector orcStartingTeam {
+        PlayerType::Lineman,
+        PlayerType::Lineman,
+        PlayerType::Blitzer,
+        PlayerType::Blitzer,
+        PlayerType::Blitzer,
+        PlayerType::Blitzer,
+        PlayerType::BigUn,
+        PlayerType::BigUn,
+        PlayerType::BigUn,
+        PlayerType::BigUn,
+        PlayerType::Thrower
+    };
+
+    teamTypeToStartingTeams.insert({TeamType::Humans, humanStartingteam});
+    teamTypeToStartingTeams.insert({TeamType::Orcs, orcStartingTeam});
+
+    return teamTypeToStartingTeams;
+}
+
 const int PlayerFactory::getMaximumAllowedPlayerType(TeamType teamType, PlayerType playerType) const {
     const PlayerTypeData& playerTypeData = teamTypeToPlayerTypeData_.at(teamType);
     int maximumAllowedPlayerType = playerTypeData.getMaximumAllowedPlayerType(playerType);
@@ -65,3 +103,32 @@ Player PlayerFactory::createPlayer(TeamType teamType, PlayerType playerType, std
 
     return player;
 }
+
+std::vector<Player> PlayerFactory::createStartingTeam(TeamType teamType) {
+    std::vector<Player> teamVector;
+    DefaultPlayerNames defaultNameGenerator;
+    std::vector<PlayerType> startingPlayerTypes;
+
+    switch (teamType)
+    {
+    case TeamType::Humans:
+        startingPlayerTypes = teamTypeToStartingTeams_.at(teamType);
+        for (const PlayerType playerType : startingPlayerTypes) {
+            teamVector.push_back(createPlayer(teamType, playerType, defaultNameGenerator.getDefaultName(teamType)));
+        }
+        break;
+
+    case TeamType::Orcs:
+        startingPlayerTypes = teamTypeToStartingTeams_.at(teamType);
+        for (const PlayerType playerType : startingPlayerTypes) {
+            teamVector.push_back(createPlayer(teamType, playerType, defaultNameGenerator.getDefaultName(teamType)));
+        }
+        break; 
+//TODO: Handle error    
+    default:
+        break;
+    }
+
+    return teamVector;
+}
+

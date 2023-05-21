@@ -32,7 +32,7 @@ class Wound {
         Wound(WoundType woundType) : woundType_(woundType) {}
         ~Wound() {}
 
-        const WoundType getWoundType() { return woundType_; }
+        const WoundType getWoundType() const { return woundType_; }
 };
 
 #endif

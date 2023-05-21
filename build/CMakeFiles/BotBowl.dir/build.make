@@ -83,10 +83,24 @@ CMakeFiles/BotBowl.dir/src/Board.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BotBowl.dir/src/Board.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/john/Documents/botbowl/src/Board.cpp -o CMakeFiles/BotBowl.dir/src/Board.cpp.s
 
+CMakeFiles/BotBowl.dir/src/Driver.cpp.o: CMakeFiles/BotBowl.dir/flags.make
+CMakeFiles/BotBowl.dir/src/Driver.cpp.o: ../src/Driver.cpp
+CMakeFiles/BotBowl.dir/src/Driver.cpp.o: CMakeFiles/BotBowl.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Documents/botbowl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BotBowl.dir/src/Driver.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BotBowl.dir/src/Driver.cpp.o -MF CMakeFiles/BotBowl.dir/src/Driver.cpp.o.d -o CMakeFiles/BotBowl.dir/src/Driver.cpp.o -c /home/john/Documents/botbowl/src/Driver.cpp
+
+CMakeFiles/BotBowl.dir/src/Driver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BotBowl.dir/src/Driver.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/john/Documents/botbowl/src/Driver.cpp > CMakeFiles/BotBowl.dir/src/Driver.cpp.i
+
+CMakeFiles/BotBowl.dir/src/Driver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BotBowl.dir/src/Driver.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/john/Documents/botbowl/src/Driver.cpp -o CMakeFiles/BotBowl.dir/src/Driver.cpp.s
+
 CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o: CMakeFiles/BotBowl.dir/flags.make
 CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o: ../src/GameStateBuffer.cpp
 CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o: CMakeFiles/BotBowl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Documents/botbowl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Documents/botbowl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o -MF CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o.d -o CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o -c /home/john/Documents/botbowl/src/GameStateBuffer.cpp
 
 CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.s: cmake_force
 CMakeFiles/BotBowl.dir/src/Player.cpp.o: CMakeFiles/BotBowl.dir/flags.make
 CMakeFiles/BotBowl.dir/src/Player.cpp.o: ../src/Player.cpp
 CMakeFiles/BotBowl.dir/src/Player.cpp.o: CMakeFiles/BotBowl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Documents/botbowl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BotBowl.dir/src/Player.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Documents/botbowl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BotBowl.dir/src/Player.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BotBowl.dir/src/Player.cpp.o -MF CMakeFiles/BotBowl.dir/src/Player.cpp.o.d -o CMakeFiles/BotBowl.dir/src/Player.cpp.o -c /home/john/Documents/botbowl/src/Player.cpp
 
 CMakeFiles/BotBowl.dir/src/Player.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/BotBowl.dir/src/Player.cpp.s: cmake_force
 CMakeFiles/BotBowl.dir/src/PlayerFactory.cpp.o: CMakeFiles/BotBowl.dir/flags.make
 CMakeFiles/BotBowl.dir/src/PlayerFactory.cpp.o: ../src/PlayerFactory.cpp
 CMakeFiles/BotBowl.dir/src/PlayerFactory.cpp.o: CMakeFiles/BotBowl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Documents/botbowl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BotBowl.dir/src/PlayerFactory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Documents/botbowl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BotBowl.dir/src/PlayerFactory.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BotBowl.dir/src/PlayerFactory.cpp.o -MF CMakeFiles/BotBowl.dir/src/PlayerFactory.cpp.o.d -o CMakeFiles/BotBowl.dir/src/PlayerFactory.cpp.o -c /home/john/Documents/botbowl/src/PlayerFactory.cpp
 
 CMakeFiles/BotBowl.dir/src/PlayerFactory.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/BotBowl.dir/src/PlayerFactory.cpp.s: cmake_force
 CMakeFiles/BotBowl.dir/src/Team.cpp.o: CMakeFiles/BotBowl.dir/flags.make
 CMakeFiles/BotBowl.dir/src/Team.cpp.o: ../src/Team.cpp
 CMakeFiles/BotBowl.dir/src/Team.cpp.o: CMakeFiles/BotBowl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Documents/botbowl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BotBowl.dir/src/Team.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Documents/botbowl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BotBowl.dir/src/Team.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BotBowl.dir/src/Team.cpp.o -MF CMakeFiles/BotBowl.dir/src/Team.cpp.o.d -o CMakeFiles/BotBowl.dir/src/Team.cpp.o -c /home/john/Documents/botbowl/src/Team.cpp
 
 CMakeFiles/BotBowl.dir/src/Team.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/BotBowl.dir/src/Team.cpp.s: cmake_force
 CMakeFiles/BotBowl.dir/src/main.cpp.o: CMakeFiles/BotBowl.dir/flags.make
 CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/BotBowl.dir/src/main.cpp.o: CMakeFiles/BotBowl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Documents/botbowl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BotBowl.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Documents/botbowl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BotBowl.dir/src/main.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BotBowl.dir/src/main.cpp.o -MF CMakeFiles/BotBowl.dir/src/main.cpp.o.d -o CMakeFiles/BotBowl.dir/src/main.cpp.o -c /home/john/Documents/botbowl/src/main.cpp
 
 CMakeFiles/BotBowl.dir/src/main.cpp.i: cmake_force
@@ -156,6 +170,7 @@ CMakeFiles/BotBowl.dir/src/main.cpp.s: cmake_force
 # Object files for target BotBowl
 BotBowl_OBJECTS = \
 "CMakeFiles/BotBowl.dir/src/Board.cpp.o" \
+"CMakeFiles/BotBowl.dir/src/Driver.cpp.o" \
 "CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o" \
 "CMakeFiles/BotBowl.dir/src/Player.cpp.o" \
 "CMakeFiles/BotBowl.dir/src/PlayerFactory.cpp.o" \
@@ -166,6 +181,7 @@ BotBowl_OBJECTS = \
 BotBowl_EXTERNAL_OBJECTS =
 
 BotBowl: CMakeFiles/BotBowl.dir/src/Board.cpp.o
+BotBowl: CMakeFiles/BotBowl.dir/src/Driver.cpp.o
 BotBowl: CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o
 BotBowl: CMakeFiles/BotBowl.dir/src/Player.cpp.o
 BotBowl: CMakeFiles/BotBowl.dir/src/PlayerFactory.cpp.o
@@ -173,7 +189,7 @@ BotBowl: CMakeFiles/BotBowl.dir/src/Team.cpp.o
 BotBowl: CMakeFiles/BotBowl.dir/src/main.cpp.o
 BotBowl: CMakeFiles/BotBowl.dir/build.make
 BotBowl: CMakeFiles/BotBowl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/john/Documents/botbowl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable BotBowl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/john/Documents/botbowl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable BotBowl"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BotBowl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

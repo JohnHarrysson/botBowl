@@ -547,6 +547,30 @@ src/Board.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BotBowl.dir/build.make CMakeFiles/BotBowl.dir/src/Board.cpp.s
 .PHONY : src/Board.cpp.s
 
+src/Driver.o: src/Driver.cpp.o
+.PHONY : src/Driver.o
+
+# target to build an object file
+src/Driver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BotBowl.dir/build.make CMakeFiles/BotBowl.dir/src/Driver.cpp.o
+.PHONY : src/Driver.cpp.o
+
+src/Driver.i: src/Driver.cpp.i
+.PHONY : src/Driver.i
+
+# target to preprocess a source file
+src/Driver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BotBowl.dir/build.make CMakeFiles/BotBowl.dir/src/Driver.cpp.i
+.PHONY : src/Driver.cpp.i
+
+src/Driver.s: src/Driver.cpp.s
+.PHONY : src/Driver.s
+
+# target to generate assembly for a file
+src/Driver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BotBowl.dir/build.make CMakeFiles/BotBowl.dir/src/Driver.cpp.s
+.PHONY : src/Driver.cpp.s
+
 src/GameStateBuffer.o: src/GameStateBuffer.cpp.o
 .PHONY : src/GameStateBuffer.o
 
@@ -710,6 +734,9 @@ help:
 	@echo "... src/Board.o"
 	@echo "... src/Board.i"
 	@echo "... src/Board.s"
+	@echo "... src/Driver.o"
+	@echo "... src/Driver.i"
+	@echo "... src/Driver.s"
 	@echo "... src/GameStateBuffer.o"
 	@echo "... src/GameStateBuffer.i"
 	@echo "... src/GameStateBuffer.s"

@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "BotBowl.pdb"
   "CMakeFiles/BotBowl.dir/src/Board.cpp.o"
   "CMakeFiles/BotBowl.dir/src/Board.cpp.o.d"
+  "CMakeFiles/BotBowl.dir/src/Driver.cpp.o"
+  "CMakeFiles/BotBowl.dir/src/Driver.cpp.o.d"
   "CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o"
   "CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o.d"
   "CMakeFiles/BotBowl.dir/src/Player.cpp.o"

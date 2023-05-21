@@ -1,0 +1,16 @@
+#ifndef STATES_H
+#define STATES_H
+
+enum class GameState {
+    PLAYER1_INDUCEMENT,
+    PLAYER2_INDUcEMENT,
+    PLAYER1_SETUP,
+    PLAYER2_SETUP,
+    KICKOFF,
+    KIKCOFF_EVENT,
+    PLAYER1_TURN,
+    PLAYER2_TURN,
+    GAME_OVER
+};
+
+#endif
