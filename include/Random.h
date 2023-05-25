@@ -4,10 +4,15 @@
 #include <random>
 #include <ctime>
 
-int getRandomIndex(int min, int max) {
-    static std::mt19937 rng(std::time(nullptr));
-    std::uniform_int_distribution<int> distribution(min, max);
-    return distribution(rng);
-}
+class Nuffle {
+    private:
+
+    public:
+        int getRandomIndex(int min, int max) {
+            static std::mt19937 rng(std::time(nullptr));
+            std::uniform_int_distribution<int> distribution(min, max);
+            return distribution(rng);
+        }
+};
 
 #endif

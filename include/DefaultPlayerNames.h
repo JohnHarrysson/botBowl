@@ -48,15 +48,17 @@ class DefaultNameGenerator
 
     public:
         std::string getDefaultName(TeamType teamType) {
+            Nuffle nuffle;
             int randomIndex;
+
             switch (teamType)
             {
             case TeamType::Humans:
-                randomIndex = getRandomIndex(0, humanDefaultNames.size() - 1);
+                randomIndex = nuffle.getRandomIndex(0, humanDefaultNames.size() - 1);
                 return humanDefaultNames[randomIndex];
             
             case TeamType::Orcs:
-                randomIndex = getRandomIndex(0, orcDefaultNames.size() - 1);
+                randomIndex = nuffle.getRandomIndex(0, orcDefaultNames.size() - 1);
                 return orcDefaultNames[randomIndex];
 
             default:
