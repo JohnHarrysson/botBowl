@@ -18,6 +18,7 @@ public:
     const int getAgility() const { return playerStats_.agility; }
     const int getArmor() const { return playerStats_.armor; }
     const int getMovement() const { return playerStats_.movement; }
+    const int getPlayerValue() const { return playerStats_.value; }
 
     void setStrength(int strength) { playerStats_.strength = strength; }
     void setAgility(int agility) { playerStats_.agility = agility; }

@@ -9,11 +9,11 @@ std::unordered_map<TeamType, PlayerTypeData> PlayerFactory::initializePlayerType
     std::unordered_map<TeamType, PlayerTypeData> teamTypeToPlayerTypeData;
 
     Positionals humanPositionals = {
-        {PlayerType::Lineman, {6,3,3,5,8,{},{},{},{},{}}},
-        {PlayerType::Blitzer, {7, 3, 3, 5, 8, {GeneralSkill::Block}, {}, {}, {}, {}}},
-        {PlayerType::Thrower, {6, 3, 3, 2, 8, {GeneralSkill::Sure_Hands}, {}, {}, {PassingSkill::Pass}, {}}},
-        {PlayerType::Catcher, {8, 2, 3, 4, 7, {}, {}, {AgilitySkill::Dodge, AgilitySkill::Catch}, {}, {}}},
-        {PlayerType::Ogre, {5,5,4,5,10, {GeneralSkill::Thick_Skull, GeneralSkill::Bone_Head}, {StrengthSkill::Mighty_Blow}, {}, {}, {}}}
+        {PlayerType::Lineman, {6,3,3,5,8,{},{},{},{},{}, 50000}},
+        {PlayerType::Blitzer, {7, 3, 3, 5, 8, {GeneralSkill::Block}, {}, {}, {}, {}, 85000}},
+        {PlayerType::Thrower, {6, 3, 3, 2, 8, {GeneralSkill::Sure_Hands}, {}, {}, {PassingSkill::Pass}, {}, 80000}},
+        {PlayerType::Catcher, {8, 2, 3, 4, 7, {}, {}, {AgilitySkill::Dodge, AgilitySkill::Catch}, {}, {}, 65000}},
+        {PlayerType::Ogre, {5,5,4,5,10, {GeneralSkill::Thick_Skull, GeneralSkill::Bone_Head}, {StrengthSkill::Mighty_Blow}, {}, {}, {}, 140000}}
     };
     std::unordered_map<PlayerType, int> humanMaximumAllowedPlayerTypes {
         {PlayerType::Lineman, 14},
@@ -24,12 +24,12 @@ std::unordered_map<TeamType, PlayerTypeData> PlayerFactory::initializePlayerType
     };
 
     Positionals orcPositionals = {
-        {PlayerType::Lineman, {5, 3, 3, 4, 9, {GeneralSkill::Animosity}, {}, {}, {}, {}}},
-        {PlayerType::Blitzer, {6, 3, 3, 4, 9, {GeneralSkill::Animosity, GeneralSkill::Block}, {}, {}, {}, {}}},
-        {PlayerType::Thrower, {5, 3, 3, 3, 8, {GeneralSkill::Animosity, GeneralSkill::Sure_Hands}, {}, {}, {PassingSkill::Pass}, {}}},
-        {PlayerType::Goblin, {6, 2, 3, 4, 7, {}, {}, {AgilitySkill::Dodge}, {}, {}}},
-        {PlayerType::BigUn, {5, 4, 4, 0, 9, {GeneralSkill::Animosity}, {}, {}, {}, {}}},
-        {PlayerType::Troll, {4,5,5,5,10, {GeneralSkill::Really_Stupid, GeneralSkill::Regeneration}, {StrengthSkill::Mighty_Blow},{},{},{}}}
+        {PlayerType::Lineman, {5, 3, 3, 4, 9, {GeneralSkill::Animosity}, {}, {}, {}, {}, 50000}},
+        {PlayerType::Blitzer, {6, 3, 3, 4, 9, {GeneralSkill::Animosity, GeneralSkill::Block}, {}, {}, {}, {}, 80000}},
+        {PlayerType::Thrower, {5, 3, 3, 3, 8, {GeneralSkill::Animosity, GeneralSkill::Sure_Hands}, {}, {}, {PassingSkill::Pass}, {}, 65000}},
+        {PlayerType::Goblin, {6, 2, 3, 4, 7, {}, {}, {AgilitySkill::Dodge}, {}, {}, 40000}},
+        {PlayerType::BigUn, {5, 4, 4, 0, 9, {GeneralSkill::Animosity}, {}, {}, {}, {}, 90000}},
+        {PlayerType::Troll, {4,5,5,5,10, {GeneralSkill::Really_Stupid, GeneralSkill::Regeneration}, {StrengthSkill::Mighty_Blow},{},{},{}, 115000}}
     };
     std::unordered_map<PlayerType, int> orcMaximumAllowedPlayerTypes {
         {PlayerType::Lineman, 14},
@@ -94,6 +94,7 @@ const int PlayerFactory::getMaximumAllowedPlayerType(TeamType teamType, PlayerTy
     return maximumAllowedPlayerType;
 }
 
+//TODO: Fix default naming
 Player PlayerFactory::createPlayer(TeamType teamType, PlayerType playerType, std::string name) {
 
     const PlayerTypeData& playerTypeData = teamTypeToPlayerTypeData_.at(teamType);
@@ -106,7 +107,7 @@ Player PlayerFactory::createPlayer(TeamType teamType, PlayerType playerType, std
 
 std::vector<Player> PlayerFactory::createStartingTeam(TeamType teamType) {
     std::vector<Player> teamVector;
-    DefaultPlayerNames defaultNameGenerator;
+    DefaultNameGenerator defaultNameGenerator;
     std::vector<PlayerType> startingPlayerTypes;
 
     switch (teamType)

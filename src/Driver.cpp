@@ -2,22 +2,28 @@
 #include "Team.h"
 #include "TeamTypes.h"
 
-Driver::Driver(PlayerFactory playerFactory) : playerFactory_(playerFactory) {}
+GameDriver::GameDriver(PlayerFactory &playerFactory) : playerFactory_(playerFactory) {}
 
-void Driver::driveManagement() {
+void GameDriver::driveManagement() {
 
     while(true) {
         //TODO: Add possibility to buy players, upgrade players, etc.
         // early stage this will not be an option but the same initial teams will be created before every match
 
-        Team humanTeam(TeamType::Humans, "TheHumanTeam", getPlayerFactory())
-        Team orcTeam(TeamType::Orcs, "TheOrcTeam", getPlayerFactory())
+        //Generate default teams
+        Team humanTeam(TeamType::Humans, "The Humans", this->getPlayerFactory());
+        humanTeam.generateStartingTeam();
+
+        Team orcTeam(TeamType::Orcs, "The Orcs", this->getPlayerFactory());
+        orcTeam.generateStartingTeam();
+
+
 
 
     }
     }
 
-void Driver::driveMatch() {
+void GameDriver::driveMatch() {
 
 }
 

@@ -11,7 +11,7 @@ class GameDriver {
         void driveManagement();
         void driveMatch();
 
-        const PlayerFactory getPlayerFactory() const { return playerFactory_; }
+        const PlayerFactory& getPlayerFactory() const { return playerFactory_; }
 
     private:
         PlayerFactory &playerFactory_;

@@ -15,10 +15,13 @@ private:
     std::vector<Player> players_;
     PlayerFactory playerFactory_;
     int teamValue_ = 0;
+    int treasury_ = 1000000;
 
 public:
     Team(TeamType teamType, std::string teamName, const PlayerFactory& playerFactory);
     ~Team() {}
+
+    void generateStartingTeam();
 
     std::string getName() const { return teamName_; }
     std::vector<Player> getPlayers() const { return players_; }
@@ -26,8 +29,11 @@ public:
     void setPlayers(std::vector<Player>& players) { players_ = players; }
     std::string setPlayerName();
 
-    int getTeamValue() { return teamValue_; }
+    const int getTeamValue() { return teamValue_; }
     void setTeamValue(int newValue) { teamValue_ = newValue; }
+
+    const int getTreasury() { return treasury_; }
+    void setTreasury(int newTreasury) { treasury_ = newTreasury; }
 
     void addPlayer(Player& player) { players_.push_back(player); }
 
