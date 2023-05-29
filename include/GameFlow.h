@@ -1,15 +1,16 @@
 #ifndef STATES_H
 #define STATES_H
 
-enum class GameState {
+enum class GameFlow{
     PLAYER1_INDUCEMENT,
     PLAYER2_INDUcEMENT,
+    COIN_TOSS,
     PLAYER1_SETUP,
     PLAYER2_SETUP,
     KICKOFF,
     KIKCOFF_EVENT,
-    PLAYER1_TURN,
-    PLAYER2_TURN,
+    TURN1,
+    TURN2,
     GAME_OVER
 };
 

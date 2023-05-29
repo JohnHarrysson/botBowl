@@ -1,28 +1,21 @@
 #include "Driver.h"
 #include "Team.h"
 #include "TeamTypes.h"
+#include "Agent.h"
+#include "Board.h"
 
-GameDriver::GameDriver(const PlayerFactory &playerFactory, const Nuffle &nuffle) : playerFactory_(playerFactory), nuffle_(nuffle) {}
-
-void GameDriver::driveManagement() {
-
-    //Generate default teams
-    Team humanTeam(TeamType::Humans, "The Humans", this->getPlayerFactory());
+Game GameDriver::createGame(const PlayerFactory &playerFactory) {
+    Team humanTeam(TeamType::Humans, "The humans", playerFactory);
     humanTeam.generateStartingTeam();
-
-    Team orcTeam(TeamType::Orcs, "The Orcs", this->getPlayerFactory());
+    Team orcTeam(TeamType::Orcs, "The orcs", playerFactory);
     orcTeam.generateStartingTeam();
 
-    while(true) {
-        //TODO: Add possibility to buy players, upgrade players, etc.
-        // early stage this will not be an option but the same initial teams will be created before every match
+    Agent player1(humanTeam);
+    Agent player2(orcTeam);
+    Board board;
 
-        //TODO: Handle selection of own team vs opposing team, to start only humans are own team.
-        this->driveMatch(humanTeam, orcTeam, this->getRandomizer());
-    }
-}
+    Game game(player1, player2, board);
 
-void GameDriver::driveMatch(Team &ownTeam, Team &opposingTeam, const Nuffle &nuffle) {
-
+    return game;
 }
 
