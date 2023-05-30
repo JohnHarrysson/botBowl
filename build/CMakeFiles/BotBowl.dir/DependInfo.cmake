@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/john/Documents/botbowl/src/Board.cpp" "CMakeFiles/BotBowl.dir/src/Board.cpp.o" "gcc" "CMakeFiles/BotBowl.dir/src/Board.cpp.o.d"
   "/home/john/Documents/botbowl/src/Driver.cpp" "CMakeFiles/BotBowl.dir/src/Driver.cpp.o" "gcc" "CMakeFiles/BotBowl.dir/src/Driver.cpp.o.d"
+  "/home/john/Documents/botbowl/src/Game.cpp" "CMakeFiles/BotBowl.dir/src/Game.cpp.o" "gcc" "CMakeFiles/BotBowl.dir/src/Game.cpp.o.d"
   "/home/john/Documents/botbowl/src/GameStateBuffer.cpp" "CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o" "gcc" "CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o.d"
   "/home/john/Documents/botbowl/src/Player.cpp" "CMakeFiles/BotBowl.dir/src/Player.cpp.o" "gcc" "CMakeFiles/BotBowl.dir/src/Player.cpp.o.d"
   "/home/john/Documents/botbowl/src/PlayerFactory.cpp" "CMakeFiles/BotBowl.dir/src/PlayerFactory.cpp.o" "gcc" "CMakeFiles/BotBowl.dir/src/PlayerFactory.cpp.o.d"

@@ -1,7 +1,8 @@
-#ifndef STATES_H
-#define STATES_H
+#ifndef GAME_STAGE_H
+#define GAME_STAGE_H
 
-enum class GameFlow{
+enum class GameStage{
+    CHECK_TEAM_VALUE,
     PLAYER1_INDUCEMENT,
     PLAYER2_INDUcEMENT,
     COIN_TOSS,

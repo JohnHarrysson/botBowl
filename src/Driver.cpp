@@ -19,3 +19,20 @@ Game GameDriver::createGame(const PlayerFactory &playerFactory) {
     return game;
 }
 
+void GameDriver::runGame() {
+    while (true){
+        //TODO: handle based on true/false returned
+        getGame().step(currentStage_);
+
+        //TODO: handle so stage can be set on demand (play forward o backward)
+        GameStage nextStage = static_cast<GameStage>(static_cast<int>(currentStage_) + 1); 
+
+        setCurrentStage(nextStage);
+
+        if (currentStage_ == GameStage::GAME_OVER) {
+                break;
+        }
+    }
+
+    handleGameOver();
+}
