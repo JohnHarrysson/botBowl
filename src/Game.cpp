@@ -1,24 +1,31 @@
 #include "Game.h"
 
-bool Game::step(GameStage currentStage) {
+GameStage Game::handleStageAndReturnNextStage(GameStage currentStage) {
     switch (currentStage)
     {
-    case GameStage::CHECK_TEAM_VALUE:
+    case GameStage::CHECK_TEAM_VALUE: {
+        int homeTeamValue = getHomeAgent().getTeam().getTeamValue();
+        int awayTeamValue = getAwayAgent().getTeam().getTeamValue();
+        
+        setPreviousStage(GameStage::CHECK_TEAM_VALUE);
+        return homeTeamValue <= awayTeamValue ? GameStage::HOME_INDUCEMENT : GameStage::AWAY_INDUCEMENT;
+    }
+    case GameStage::HOME_INDUCEMENT: {
+        Agent agent = getHomeAgentReference();
+        handleInducement(agent);
+        setPreviousStage(GameStage::HOME_INDUCEMENT);
         break;
-
-    case GameStage::PLAYER1_INDUCEMENT:
-        break;
-    
-    case GameStage::PLAYER2_INDUCEMENT:
+    }
+    case GameStage::AWAY_INDUCEMENT:
         break;
 
     case GameStage::COIN_TOSS:
         break;
 
-    case GameStage::PLAYER1_SETUP:
+    case GameStage::HOME_SETUP:
         break;
 
-    case GameStage::PLAYER2_SETUP:
+    case GameStage::AWAY_SETUP:
         break;
 
     case GameStage::KICKOFF:

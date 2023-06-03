@@ -8,6 +8,8 @@ class Agent {
         Agent(Team team) : team_(team) {}
         ~Agent() {}
 
+        const Team& getTeam() const { return team_; }
+
         void act();
 
     private:

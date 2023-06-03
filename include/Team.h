@@ -29,7 +29,7 @@ public:
     void setPlayers(std::vector<Player>& players) { players_ = players; }
     std::string setPlayerName();
 
-    const int getTeamValue() { return teamValue_; }
+    const int getTeamValue() const { return teamValue_; }
     void setTeamValue(int newValue) { teamValue_ = newValue; }
 
     const int getTreasury() { return treasury_; }
