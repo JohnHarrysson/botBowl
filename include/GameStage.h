@@ -11,7 +11,8 @@ enum class GameStage{
     KICKOFF,
     KIKCOFF_EVENT,
     TURN,
-    GAME_OVER
+    GAME_OVER,
+    COUNT
 };
 
 #endif

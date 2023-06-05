@@ -31,14 +31,15 @@ class Board {
         constexpr static int boardWidth{15};
         constexpr static int nrLayers{14};
 
-        void storeBoardState(CircularBuffer<BoardTensor>& gameStateBuffer, BoardTensor const currentState) const;
+        void storeGameState(CircularBuffer<BoardTensor>& gameStateBuffer, BoardTensor const currentGameState) const;
+        const BoardTensor getCurrentGameState() const { return boardTensor_; }
 
         Board getLayer(LayerType) const;
 
         void updateBoardState(BoardTensor& currentState, int x, int y, LayerType layer, float value);
     
     private:
-        BoardTensor board_;
+        BoardTensor boardTensor_;
 };
 
 #endif

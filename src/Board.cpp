@@ -1,13 +1,13 @@
 #include "Board.h"
 
-Board::Board() : board_(boardWidth, std::vector<std::vector<float>>(boardHeight, std::vector<float>(nrLayers, 0.0f))) {}
+Board::Board() : boardTensor_(boardWidth, std::vector<std::vector<float>>(boardHeight, std::vector<float>(nrLayers, 0.0f))) {}
 
-void Board::storeBoardState(CircularBuffer<BoardTensor>& gameStateBuffer, BoardTensor const currentState) const {
+void Board::storeGameState(CircularBuffer<BoardTensor> &gameStateBuffer, BoardTensor const currentBoardState) const {
     if (gameStateBuffer.isFull()) {
         gameStateBuffer.pop();
     }
     
-    gameStateBuffer.push(currentState);
+    gameStateBuffer.push(currentBoardState);
 }
 
 void Board::updateBoardState(BoardTensor& currentState, int x, int y, LayerType layer, float value) {

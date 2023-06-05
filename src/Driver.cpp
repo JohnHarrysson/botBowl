@@ -13,8 +13,11 @@ Game GameDriver::createGame(const PlayerFactory &playerFactory) {
     Agent player1(humanTeam);
     Agent player2(orcTeam);
     Board board;
+    // TODO: Fix hard coding
+    int numStates{400};
+    CircularBuffer<BoardTensor> gameStateBuffer(numStates);
 
-    Game game(player1, player2, board);
+    Game game(player1, player2, board, gameStateBuffer);
 
     return game;
 }

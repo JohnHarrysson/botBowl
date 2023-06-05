@@ -64,8 +64,9 @@ CMakeFiles/BotBowl.dir/src/Driver.cpp.o: ../src/Driver.cpp \
   ../include/GameStage.h \
   ../include/Game.h \
   ../include/Agent.h \
-  ../include/Team.h \
-  /usr/include/c++/11/string \
+  ../include/Aliases.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
   /usr/include/features.h \
@@ -78,10 +79,6 @@ CMakeFiles/BotBowl.dir/src/Driver.cpp.o: ../src/Driver.cpp \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
   /usr/include/c++/11/pstl/pstl_config.h \
-  /usr/include/c++/11/bits/stringfwd.h \
-  /usr/include/c++/11/bits/memoryfwd.h \
-  /usr/include/c++/11/bits/char_traits.h \
-  /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/c++/11/bits/functexcept.h \
   /usr/include/c++/11/bits/exception_defines.h \
   /usr/include/c++/11/bits/cpp_type_traits.h \
@@ -98,6 +95,27 @@ CMakeFiles/BotBowl.dir/src/Driver.cpp.o: ../src/Driver.cpp \
   /usr/include/c++/11/bits/ptr_traits.h \
   /usr/include/c++/11/debug/debug.h \
   /usr/include/c++/11/bits/predefined_ops.h \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/new \
+  /usr/include/c++/11/bits/exception.h \
+  /usr/include/c++/11/bits/memoryfwd.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/ext/alloc_traits.h \
+  /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/functional_hash.h \
+  /usr/include/c++/11/bits/hash_bytes.h \
+  /usr/include/c++/11/bits/range_access.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  ../include/Team.h \
+  /usr/include/c++/11/string \
+  /usr/include/c++/11/bits/stringfwd.h \
+  /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/bits/postypes.h \
   /usr/include/c++/11/cwchar \
   /usr/include/wchar.h \
@@ -122,11 +140,6 @@ CMakeFiles/BotBowl.dir/src/Driver.cpp.o: ../src/Driver.cpp \
   /usr/include/x86_64-linux-gnu/bits/time64.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/c++/11/bits/allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
-  /usr/include/c++/11/ext/new_allocator.h \
-  /usr/include/c++/11/new \
-  /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/localefwd.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
   /usr/include/c++/11/clocale \
@@ -141,8 +154,6 @@ CMakeFiles/BotBowl.dir/src/Driver.cpp.o: ../src/Driver.cpp \
   /usr/include/c++/11/bits/cxxabi_forced.h \
   /usr/include/c++/11/bits/stl_function.h \
   /usr/include/c++/11/backward/binders.h \
-  /usr/include/c++/11/bits/range_access.h \
-  /usr/include/c++/11/initializer_list \
   /usr/include/c++/11/bits/basic_string.h \
   /usr/include/c++/11/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
@@ -175,12 +186,7 @@ CMakeFiles/BotBowl.dir/src/Driver.cpp.o: ../src/Driver.cpp \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
-  /usr/include/c++/11/ext/alloc_traits.h \
-  /usr/include/c++/11/bits/alloc_traits.h \
-  /usr/include/c++/11/bits/stl_construct.h \
   /usr/include/c++/11/string_view \
-  /usr/include/c++/11/bits/functional_hash.h \
-  /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/ext/string_conversions.h \
   /usr/include/c++/11/cstdlib \
@@ -217,11 +223,6 @@ CMakeFiles/BotBowl.dir/src/Driver.cpp.o: ../src/Driver.cpp \
   ../include/TeamTypes.h \
   ../include/PlayerTypes.h \
   ../include/Player.h \
-  /usr/include/c++/11/vector \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
-  /usr/include/c++/11/bits/stl_vector.h \
-  /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/cassert \
   /usr/include/assert.h \
   ../include/Skills.h \
@@ -244,8 +245,32 @@ CMakeFiles/BotBowl.dir/src/Driver.cpp.o: ../src/Driver.cpp \
   ../include/PlayerFactory.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/unordered_map.h \
+  ../include/Action.h \
+  ../include/Event.h \
+  /usr/include/c++/11/memory \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/11/bits/align.h \
+  /usr/include/c++/11/bit \
+  /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/bits/refwrap.h \
+  /usr/include/c++/11/ext/concurrence.h \
+  /usr/include/c++/11/exception \
+  /usr/include/c++/11/bits/exception_ptr.h \
+  /usr/include/c++/11/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11/bits/nested_exception.h \
+  /usr/include/c++/11/bits/shared_ptr_atomic.h \
+  /usr/include/c++/11/bits/atomic_base.h \
+  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/11/backward/auto_ptr.h \
+  /usr/include/c++/11/pstl/glue_memory_defs.h \
+  /usr/include/c++/11/pstl/execution_defs.h \
+  ../include/EventType.h \
   ../include/Board.h \
-  ../include/Aliases.h \
   ../include/GameStateBuffer.h \
   /usr/include/c++/11/cstddef \
   ../include/Team.h \
@@ -257,8 +282,9 @@ CMakeFiles/BotBowl.dir/src/Game.cpp.o: ../src/Game.cpp \
   /usr/include/stdc-predef.h \
   ../include/Game.h \
   ../include/Agent.h \
-  ../include/Team.h \
-  /usr/include/c++/11/string \
+  ../include/Aliases.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
   /usr/include/features.h \
@@ -271,10 +297,6 @@ CMakeFiles/BotBowl.dir/src/Game.cpp.o: ../src/Game.cpp \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
   /usr/include/c++/11/pstl/pstl_config.h \
-  /usr/include/c++/11/bits/stringfwd.h \
-  /usr/include/c++/11/bits/memoryfwd.h \
-  /usr/include/c++/11/bits/char_traits.h \
-  /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/c++/11/bits/functexcept.h \
   /usr/include/c++/11/bits/exception_defines.h \
   /usr/include/c++/11/bits/cpp_type_traits.h \
@@ -291,6 +313,27 @@ CMakeFiles/BotBowl.dir/src/Game.cpp.o: ../src/Game.cpp \
   /usr/include/c++/11/bits/ptr_traits.h \
   /usr/include/c++/11/debug/debug.h \
   /usr/include/c++/11/bits/predefined_ops.h \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/new \
+  /usr/include/c++/11/bits/exception.h \
+  /usr/include/c++/11/bits/memoryfwd.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/ext/alloc_traits.h \
+  /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/functional_hash.h \
+  /usr/include/c++/11/bits/hash_bytes.h \
+  /usr/include/c++/11/bits/range_access.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  ../include/Team.h \
+  /usr/include/c++/11/string \
+  /usr/include/c++/11/bits/stringfwd.h \
+  /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/bits/postypes.h \
   /usr/include/c++/11/cwchar \
   /usr/include/wchar.h \
@@ -315,11 +358,6 @@ CMakeFiles/BotBowl.dir/src/Game.cpp.o: ../src/Game.cpp \
   /usr/include/x86_64-linux-gnu/bits/time64.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/c++/11/bits/allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
-  /usr/include/c++/11/ext/new_allocator.h \
-  /usr/include/c++/11/new \
-  /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/localefwd.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
   /usr/include/c++/11/clocale \
@@ -334,8 +372,6 @@ CMakeFiles/BotBowl.dir/src/Game.cpp.o: ../src/Game.cpp \
   /usr/include/c++/11/bits/cxxabi_forced.h \
   /usr/include/c++/11/bits/stl_function.h \
   /usr/include/c++/11/backward/binders.h \
-  /usr/include/c++/11/bits/range_access.h \
-  /usr/include/c++/11/initializer_list \
   /usr/include/c++/11/bits/basic_string.h \
   /usr/include/c++/11/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
@@ -368,12 +404,7 @@ CMakeFiles/BotBowl.dir/src/Game.cpp.o: ../src/Game.cpp \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
-  /usr/include/c++/11/ext/alloc_traits.h \
-  /usr/include/c++/11/bits/alloc_traits.h \
-  /usr/include/c++/11/bits/stl_construct.h \
   /usr/include/c++/11/string_view \
-  /usr/include/c++/11/bits/functional_hash.h \
-  /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/ext/string_conversions.h \
   /usr/include/c++/11/cstdlib \
@@ -410,11 +441,6 @@ CMakeFiles/BotBowl.dir/src/Game.cpp.o: ../src/Game.cpp \
   ../include/TeamTypes.h \
   ../include/PlayerTypes.h \
   ../include/Player.h \
-  /usr/include/c++/11/vector \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
-  /usr/include/c++/11/bits/stl_vector.h \
-  /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/cassert \
   /usr/include/assert.h \
   ../include/Skills.h \
@@ -437,11 +463,36 @@ CMakeFiles/BotBowl.dir/src/Game.cpp.o: ../src/Game.cpp \
   ../include/PlayerFactory.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/unordered_map.h \
+  ../include/Action.h \
+  ../include/Event.h \
+  /usr/include/c++/11/memory \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/11/bits/align.h \
+  /usr/include/c++/11/bit \
+  /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/bits/refwrap.h \
+  /usr/include/c++/11/ext/concurrence.h \
+  /usr/include/c++/11/exception \
+  /usr/include/c++/11/bits/exception_ptr.h \
+  /usr/include/c++/11/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11/bits/nested_exception.h \
+  /usr/include/c++/11/bits/shared_ptr_atomic.h \
+  /usr/include/c++/11/bits/atomic_base.h \
+  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/11/backward/auto_ptr.h \
+  /usr/include/c++/11/pstl/glue_memory_defs.h \
+  /usr/include/c++/11/pstl/execution_defs.h \
+  ../include/EventType.h \
   ../include/Board.h \
-  ../include/Aliases.h \
   ../include/GameStateBuffer.h \
   /usr/include/c++/11/cstddef \
-  ../include/GameStage.h
+  ../include/GameStage.h \
+  ../include/Event.h
 
 CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o: ../src/GameStateBuffer.cpp \
   /usr/include/stdc-predef.h
@@ -1069,7 +1120,31 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
+/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
+
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/include/c++/11/cwctype:
+
+/usr/include/c++/11/bits/streambuf.tcc:
+
+/usr/include/c++/11/streambuf:
+
+/usr/include/c++/11/stdexcept:
+
+/usr/include/c++/11/system_error:
+
+/usr/include/c++/11/bits/locale_classes.tcc:
+
+/usr/include/c++/11/bits/locale_classes.h:
+
+/usr/include/c++/11/bits/ios_base.h:
+
+/usr/include/c++/11/ostream:
+
 /usr/include/c++/11/ext/new_allocator.h:
+
+/usr/include/c++/11/bits/allocated_ptr.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
@@ -1079,11 +1154,17 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
+/usr/include/wctype.h:
+
+/usr/include/sched.h:
+
 /usr/include/pthread.h:
 
 ../include/Team.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
+
+/usr/include/c++/11/ext/concurrence.h:
 
 /usr/include/c++/11/backward/binders.h:
 
@@ -1097,6 +1178,8 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
+/usr/include/c++/11/bits/shared_ptr_base.h:
+
 /usr/include/c++/11/bits/basic_string.h:
 
 /usr/include/locale.h:
@@ -1104,6 +1187,10 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/c++/11/bits/localefwd.h:
+
+/usr/include/c++/11/bits/streambuf_iterator.h:
+
+../include/Random.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
@@ -1133,8 +1220,6 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
@@ -1143,17 +1228,21 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/cwchar:
 
+/usr/include/c++/11/bits/stl_tempbuf.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
 /usr/include/wchar.h:
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
+
+/usr/include/c++/11/bits/basic_ios.h:
+
+/usr/include/c++/11/bits/uniform_int_dist.h:
 
 /usr/include/c++/11/bits/invoke.h:
 
@@ -1191,11 +1280,11 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
-/usr/include/c++/11/bits/stl_construct.h:
-
 /usr/include/c++/11/tr1/exp_integral.tcc:
 
 /usr/include/c++/11/ext/type_traits.h:
+
+/usr/include/c++/11/pstl/glue_memory_defs.h:
 
 /usr/include/c++/11/bits/exception_defines.h:
 
@@ -1211,9 +1300,9 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/cstdlib:
 
-/usr/include/c++/11/tr1/poly_laguerre.tcc:
-
 /usr/include/c++/11/bit:
+
+/usr/include/c++/11/tr1/poly_laguerre.tcc:
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
 
@@ -1221,11 +1310,15 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/ext/numeric_traits.h:
 
+/usr/include/c++/11/bits/atomic_base.h:
+
 /usr/include/features.h:
 
 /usr/include/c++/11/bits/vector.tcc:
 
 /usr/include/c++/11/vector:
+
+/usr/include/c++/11/bits/align.h:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
@@ -1257,8 +1350,6 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
-/usr/include/c++/11/streambuf:
-
 /usr/include/c++/11/new:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
@@ -1277,15 +1368,13 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 ../include/Board.h:
 
-/usr/include/c++/11/bits/uniform_int_dist.h:
-
-/usr/include/c++/11/bits/basic_ios.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
 ../include/PlayerTypes.h:
+
+../include/EventType.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
@@ -1329,13 +1418,13 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
+/usr/include/c++/11/backward/auto_ptr.h:
+
 /usr/include/c++/11/bits/stl_numeric.h:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/c++/11/tr1/modified_bessel_func.tcc:
-
-/usr/include/c++/11/system_error:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
 
@@ -1352,6 +1441,10 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 ../include/DefaultPlayerNames.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/c++/11/bits/locale_facets.h:
+
+/usr/include/c++/11/bits/exception.h:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
@@ -1405,6 +1498,10 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
+/usr/include/c++/11/bits/stl_construct.h:
+
+/usr/include/c++/11/bits/shared_ptr.h:
+
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/c++/11/bits/random.tcc:
@@ -1427,13 +1524,13 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/errno.h:
 
+/usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
+
+/usr/include/c++/11/ios:
+
+/usr/include/c++/11/utility:
+
 /usr/include/x86_64-linux-gnu/bits/errno.h:
-
-/usr/include/sched.h:
-
-/usr/include/wctype.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
@@ -1477,6 +1574,34 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/erase_if.h:
 
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+../include/Action.h:
+
+/usr/include/c++/11/memory:
+
+../include/Event.h:
+
+/usr/include/c++/11/bits/stl_raw_storage_iter.h:
+
+/usr/include/c++/11/bits/unique_ptr.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/usr/include/c++/11/typeinfo:
+
+/usr/include/c++/11/bits/refwrap.h:
+
+/usr/include/c++/11/exception:
+
+/usr/include/c++/11/bits/nested_exception.h:
+
+/usr/include/c++/11/bits/shared_ptr_atomic.h:
+
+/usr/include/c++/11/bits/atomic_lockfree_defines.h:
+
+/usr/include/c++/11/tr1/bessel_function.tcc:
+
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 ../src/GameStateBuffer.cpp:
@@ -1509,15 +1634,11 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
-/usr/include/c++/11/bits/ios_base.h:
-
 /usr/include/c++/11/iostream:
 
 /usr/include/c++/11/bits/node_handle.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-/usr/include/c++/11/bits/locale_classes.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
@@ -1537,12 +1658,6 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/tr1/gamma.tcc:
 
-/usr/include/c++/11/bits/locale_classes.h:
-
-/usr/include/c++/11/tr1/bessel_function.tcc:
-
-/usr/include/c++/11/bits/streambuf.tcc:
-
 /usr/include/c++/11/array:
 
 /usr/include/c++/11/tr1/beta_function.tcc:
@@ -1555,34 +1670,6 @@ CMakeFiles/BotBowl.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/tr1/poly_hermite.tcc:
 
-/usr/include/c++/11/bits/exception.h:
-
-/usr/include/c++/11/bits/locale_facets.h:
-
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
 
 ../src/Team.cpp:
-
-/usr/include/c++/11/ostream:
-
-/usr/include/c++/11/exception:
-
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
-/usr/include/c++/11/typeinfo:
-
-/usr/include/c++/11/bits/nested_exception.h:
-
-/usr/include/c++/11/ios:
-
-/usr/include/c++/11/utility:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
-
-/usr/include/c++/11/stdexcept:
-
-/usr/include/c++/11/cwctype:
-
-../include/Random.h:
-
-/usr/include/c++/11/bits/streambuf_iterator.h:

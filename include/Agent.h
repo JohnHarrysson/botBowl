@@ -1,7 +1,10 @@
 #ifndef AGENT_H
 #define AGENT_H
 
+#include "Aliases.h"
 #include "Team.h"
+#include "Action.h"
+#include "Event.h"
 
 class Agent {
     public:
@@ -10,7 +13,7 @@ class Agent {
 
         const Team& getTeam() const { return team_; }
 
-        void act();
+        Action act(Event event, BoardTensor gameState);
 
     private:
         Team team_;

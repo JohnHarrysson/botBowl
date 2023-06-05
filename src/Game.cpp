@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "Event.h"
 
 GameStage Game::handleStageAndReturnNextStage(GameStage currentStage) {
     switch (currentStage)
@@ -11,19 +12,53 @@ GameStage Game::handleStageAndReturnNextStage(GameStage currentStage) {
         return homeTeamValue <= awayTeamValue ? GameStage::HOME_INDUCEMENT : GameStage::AWAY_INDUCEMENT;
     }
     case GameStage::HOME_INDUCEMENT: {
-        Agent agent = getHomeAgentReference();
-        handleInducement(agent);
+        Agent &agent = getHomeAgentReference();
+        BoardTensor currentGameState = getBoard().getCurrentGameState();
+
+        Event coinToss(EventType::COIN_TOSS);
+        agent.act(coinToss, currentGameState);
         setPreviousStage(GameStage::HOME_INDUCEMENT);
-        break;
+
+        for (GameStage gameStage : getPreviousStages()) {
+            if (GameStage::AWAY_INDUCEMENT == gameStage) {
+                return GameStage::COIN_TOSS;
+            }
+        }
+        
+        return GameStage::AWAY_INDUCEMENT;
     }
-    case GameStage::AWAY_INDUCEMENT:
-        break;
+    case GameStage::AWAY_INDUCEMENT: {
+        Agent &agent = getHomeAgentReference();
+        BoardTensor currentGameState = getBoard().getCurrentGameState();
+
+        Event coinToss(EventType::COIN_TOSS);
+        agent.act(coinToss, currentGameState);
+        setPreviousStage(GameStage::AWAY_INDUCEMENT);
+
+        for (GameStage gameStage : getPreviousStages()) {
+            if (GameStage::AWAY_INDUCEMENT == gameStage) {
+                return GameStage::COIN_TOSS;
+            }
+        }
+        
+        return GameStage::AWAY_INDUCEMENT;
+    }
 
     case GameStage::COIN_TOSS:
         break;
 
-    case GameStage::HOME_SETUP:
+//TODO::
+    case GameStage::HOME_SETUP: {
+        Agent &agent = getHomeAgentReference();
+        BoardTensor currentGameState = getBoard().getCurrentGameState();
+
+        Event pitchSetup(EventType::PITCH_SETUP);
+        Action setupAction = agent.act(pitchSetup, currentGameState);
+        BoardTensor newGameState = resolveAction(setupAction);
+        getBoard().storeGameState(getGameStateBufferReference(), newGameState);
+
         break;
+    }
 
     case GameStage::AWAY_SETUP:
         break;
