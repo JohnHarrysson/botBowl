@@ -523,6 +523,54 @@ BotBowl/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BotBowl.dir/build.make CMakeFiles/BotBowl.dir/build
 .PHONY : BotBowl/fast
 
+src/Action.o: src/Action.cpp.o
+.PHONY : src/Action.o
+
+# target to build an object file
+src/Action.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BotBowl.dir/build.make CMakeFiles/BotBowl.dir/src/Action.cpp.o
+.PHONY : src/Action.cpp.o
+
+src/Action.i: src/Action.cpp.i
+.PHONY : src/Action.i
+
+# target to preprocess a source file
+src/Action.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BotBowl.dir/build.make CMakeFiles/BotBowl.dir/src/Action.cpp.i
+.PHONY : src/Action.cpp.i
+
+src/Action.s: src/Action.cpp.s
+.PHONY : src/Action.s
+
+# target to generate assembly for a file
+src/Action.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BotBowl.dir/build.make CMakeFiles/BotBowl.dir/src/Action.cpp.s
+.PHONY : src/Action.cpp.s
+
+src/Agent.o: src/Agent.cpp.o
+.PHONY : src/Agent.o
+
+# target to build an object file
+src/Agent.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BotBowl.dir/build.make CMakeFiles/BotBowl.dir/src/Agent.cpp.o
+.PHONY : src/Agent.cpp.o
+
+src/Agent.i: src/Agent.cpp.i
+.PHONY : src/Agent.i
+
+# target to preprocess a source file
+src/Agent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BotBowl.dir/build.make CMakeFiles/BotBowl.dir/src/Agent.cpp.i
+.PHONY : src/Agent.cpp.i
+
+src/Agent.s: src/Agent.cpp.s
+.PHONY : src/Agent.s
+
+# target to generate assembly for a file
+src/Agent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BotBowl.dir/build.make CMakeFiles/BotBowl.dir/src/Agent.cpp.s
+.PHONY : src/Agent.cpp.s
+
 src/Board.o: src/Board.cpp.o
 .PHONY : src/Board.o
 
@@ -570,6 +618,30 @@ src/Driver.s: src/Driver.cpp.s
 src/Driver.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BotBowl.dir/build.make CMakeFiles/BotBowl.dir/src/Driver.cpp.s
 .PHONY : src/Driver.cpp.s
+
+src/Event.o: src/Event.cpp.o
+.PHONY : src/Event.o
+
+# target to build an object file
+src/Event.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BotBowl.dir/build.make CMakeFiles/BotBowl.dir/src/Event.cpp.o
+.PHONY : src/Event.cpp.o
+
+src/Event.i: src/Event.cpp.i
+.PHONY : src/Event.i
+
+# target to preprocess a source file
+src/Event.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BotBowl.dir/build.make CMakeFiles/BotBowl.dir/src/Event.cpp.i
+.PHONY : src/Event.cpp.i
+
+src/Event.s: src/Event.cpp.s
+.PHONY : src/Event.s
+
+# target to generate assembly for a file
+src/Event.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BotBowl.dir/build.make CMakeFiles/BotBowl.dir/src/Event.cpp.s
+.PHONY : src/Event.cpp.s
 
 src/Game.o: src/Game.cpp.o
 .PHONY : src/Game.o
@@ -755,12 +827,21 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... BotBowl"
+	@echo "... src/Action.o"
+	@echo "... src/Action.i"
+	@echo "... src/Action.s"
+	@echo "... src/Agent.o"
+	@echo "... src/Agent.i"
+	@echo "... src/Agent.s"
 	@echo "... src/Board.o"
 	@echo "... src/Board.i"
 	@echo "... src/Board.s"
 	@echo "... src/Driver.o"
 	@echo "... src/Driver.i"
 	@echo "... src/Driver.s"
+	@echo "... src/Event.o"
+	@echo "... src/Event.i"
+	@echo "... src/Event.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"

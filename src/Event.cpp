@@ -4,7 +4,7 @@
 std::unique_ptr<Event> Event::createEvent(EventType eventType) {
     switch (eventType)
     {
-    case EventType::COINT_TOSS:
+    case EventType::COIN_TOSS:
         /* code */
         break;
 

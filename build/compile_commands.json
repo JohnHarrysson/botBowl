@@ -1,6 +1,16 @@
 [
 {
   "directory": "/home/john/Documents/botbowl/build",
+  "command": "/usr/bin/g++  -I/home/john/Documents/botbowl/include -g -o CMakeFiles/BotBowl.dir/src/Action.cpp.o -c /home/john/Documents/botbowl/src/Action.cpp",
+  "file": "/home/john/Documents/botbowl/src/Action.cpp"
+},
+{
+  "directory": "/home/john/Documents/botbowl/build",
+  "command": "/usr/bin/g++  -I/home/john/Documents/botbowl/include -g -o CMakeFiles/BotBowl.dir/src/Agent.cpp.o -c /home/john/Documents/botbowl/src/Agent.cpp",
+  "file": "/home/john/Documents/botbowl/src/Agent.cpp"
+},
+{
+  "directory": "/home/john/Documents/botbowl/build",
   "command": "/usr/bin/g++  -I/home/john/Documents/botbowl/include -g -o CMakeFiles/BotBowl.dir/src/Board.cpp.o -c /home/john/Documents/botbowl/src/Board.cpp",
   "file": "/home/john/Documents/botbowl/src/Board.cpp"
 },
@@ -8,6 +18,11 @@
   "directory": "/home/john/Documents/botbowl/build",
   "command": "/usr/bin/g++  -I/home/john/Documents/botbowl/include -g -o CMakeFiles/BotBowl.dir/src/Driver.cpp.o -c /home/john/Documents/botbowl/src/Driver.cpp",
   "file": "/home/john/Documents/botbowl/src/Driver.cpp"
+},
+{
+  "directory": "/home/john/Documents/botbowl/build",
+  "command": "/usr/bin/g++  -I/home/john/Documents/botbowl/include -g -o CMakeFiles/BotBowl.dir/src/Event.cpp.o -c /home/john/Documents/botbowl/src/Event.cpp",
+  "file": "/home/john/Documents/botbowl/src/Event.cpp"
 },
 {
   "directory": "/home/john/Documents/botbowl/build",

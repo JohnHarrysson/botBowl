@@ -8,8 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/john/Documents/botbowl/src/Action.cpp" "CMakeFiles/BotBowl.dir/src/Action.cpp.o" "gcc" "CMakeFiles/BotBowl.dir/src/Action.cpp.o.d"
+  "/home/john/Documents/botbowl/src/Agent.cpp" "CMakeFiles/BotBowl.dir/src/Agent.cpp.o" "gcc" "CMakeFiles/BotBowl.dir/src/Agent.cpp.o.d"
   "/home/john/Documents/botbowl/src/Board.cpp" "CMakeFiles/BotBowl.dir/src/Board.cpp.o" "gcc" "CMakeFiles/BotBowl.dir/src/Board.cpp.o.d"
   "/home/john/Documents/botbowl/src/Driver.cpp" "CMakeFiles/BotBowl.dir/src/Driver.cpp.o" "gcc" "CMakeFiles/BotBowl.dir/src/Driver.cpp.o.d"
+  "/home/john/Documents/botbowl/src/Event.cpp" "CMakeFiles/BotBowl.dir/src/Event.cpp.o" "gcc" "CMakeFiles/BotBowl.dir/src/Event.cpp.o.d"
   "/home/john/Documents/botbowl/src/Game.cpp" "CMakeFiles/BotBowl.dir/src/Game.cpp.o" "gcc" "CMakeFiles/BotBowl.dir/src/Game.cpp.o.d"
   "/home/john/Documents/botbowl/src/GameStateBuffer.cpp" "CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o" "gcc" "CMakeFiles/BotBowl.dir/src/GameStateBuffer.cpp.o.d"
   "/home/john/Documents/botbowl/src/Player.cpp" "CMakeFiles/BotBowl.dir/src/Player.cpp.o" "gcc" "CMakeFiles/BotBowl.dir/src/Player.cpp.o.d"

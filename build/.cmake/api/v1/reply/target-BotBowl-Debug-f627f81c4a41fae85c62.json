@@ -62,7 +62,10 @@
 				4,
 				5,
 				6,
-				7
+				7,
+				8,
+				9,
+				10
 			]
 		}
 	],
@@ -102,12 +105,27 @@
 				4,
 				5,
 				6,
-				7
+				7,
+				8,
+				9,
+				10
 			]
 		}
 	],
 	"sources" : 
 	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/Action.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/Agent.cpp",
+			"sourceGroupIndex" : 0
+		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
@@ -118,6 +136,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/Driver.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/Event.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
