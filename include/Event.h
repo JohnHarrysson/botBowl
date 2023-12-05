@@ -6,6 +6,7 @@
 
 #include "EventType.h"
 #include "Action.h"
+#include "Aliases.h"
 
 class Event {
 private:
