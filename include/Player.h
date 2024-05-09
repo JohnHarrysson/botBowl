@@ -7,6 +7,7 @@
 #include "Skills.h"
 #include "Stats.h"
 #include "Wounds.h"
+#include "Board.h"
 
 class Player
 {
@@ -20,10 +21,13 @@ public:
     const int getMovement() const { return playerStats_.movement; }
     const int getPlayerValue() const { return playerStats_.value; }
 
+    const Coordinates getCoordinates() const { return coordinates_; }
+
     void setStrength(int strength) { playerStats_.strength = strength; }
     void setAgility(int agility) { playerStats_.agility = agility; }
     void setArmor(int armor) { playerStats_.armor = armor; }
     void setMovement(int movement) { playerStats_.movement = movement; }
+    void setCoordinates(Coordinates newCoordinates) { coordinates_ = newCoordinates; }
 
     const bool getMissNextGame() const { return playerStats_.isDead; }
     const bool getIsDead() const { return playerStats_.isDead; }
@@ -62,6 +66,8 @@ private:
     
     std::vector<Wound> currentWounds_;
     std::vector<Wound> lastingWounds_;
+
+    Coordinates coordinates_;
 };
 
 #endif

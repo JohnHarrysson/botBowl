@@ -11,13 +11,12 @@
 class Event {
 private:
     EventType eventType_;
-    std::unique_ptr<Event> createEvent(EventType);
 
 public:
-    Event(EventType eventType) : eventType_(eventType) { createEvent(eventType_); }
-    ~Event();
+    Event(EventType eventType) : eventType_(eventType) {}
+    virtual ~Event() {}
 
-    std::vector<Action> pollForActions(BoardTensor currentGameState);
+    virtual std::vector<Action> pollForActions(BoardTensor currentGameState);
     EventType getEventType() { return eventType_; }
 
 
@@ -25,6 +24,11 @@ public:
 
 
 class CoinTossEvent : public Event {
+    public:
+        CoinTossEvent() : Event(EventType::COIN_TOSS) {}
+        ~CoinTossEvent() {}
+
+        std::vector<Action> pollForActions(BoardTensor currentGameState);
 
 };
 

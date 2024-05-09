@@ -1,9 +1,15 @@
 #include <vector>
+#include <set>
 #include "Aliases.h"
 #include "GameStateBuffer.h"
 
 #ifndef BOARD_H
 #define BOARD_H
+
+struct Coordinates {
+    int x;
+    int y;
+};
 
 enum class LayerType {
     OWN_PLAYERS,
@@ -36,10 +42,11 @@ class Board {
 
         Board getLayer(LayerType) const;
 
-        void updateBoardState(BoardTensor& currentState, int x, int y, LayerType layer, float value);
+        void updateBoardState(BoardTensor& currentState, Coordinates coordinates, LayerType layer, float value);
     
     private:
         BoardTensor boardTensor_;
+        static const std::set<Coordinates> coordinateSet_;
 };
 
 #endif

@@ -10,6 +10,16 @@ void Board::storeGameState(CircularBuffer<BoardTensor> &gameStateBuffer, BoardTe
     gameStateBuffer.push(currentBoardState);
 }
 
-void Board::updateBoardState(BoardTensor& currentState, int x, int y, LayerType layer, float value) {
-    currentState[x][y][static_cast<int>(layer)] = value;
+void Board::updateBoardState(BoardTensor& currentState, Coordinates coordinates, LayerType layer, float value) {
+    currentState[coordinates.x][coordinates.y][static_cast<int>(layer)] = value;
 }
+
+const std::set<Coordinates> Board::coordinateSet_ = [] {
+    std::set<Coordinates> coords;
+    for (int x = 0; x < boardWidth; ++x) {
+        for (int y = 0; y < boardHeight; ++y) {
+            coords.insert({x, y});
+        }
+    }
+    return coords;
+}();

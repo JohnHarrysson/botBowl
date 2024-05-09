@@ -35,3 +35,7 @@ void GameDriver::runGame() {
 
     handleGameOver();
 }
+
+void GameDriver::handleGameOver() {
+    // Roll for money etc
+}

@@ -45,7 +45,7 @@ GameStage Game::handleStageAndReturnNextStage(GameStage currentStage) {
     }
 
     case GameStage::COIN_TOSS:
-        break;
+        return GameStage::COIN_TOSS;
 
 //TODO::
     case GameStage::HOME_SETUP: {
@@ -57,24 +57,29 @@ GameStage Game::handleStageAndReturnNextStage(GameStage currentStage) {
         BoardTensor newGameState = resolveAction(setupAction);
         getBoard().storeGameState(getGameStateBufferReference(), newGameState);
 
-        break;
-    }
+         }
+   
 
     case GameStage::AWAY_SETUP:
-        break;
+        return GameStage::AWAY_SETUP;
 
     case GameStage::KICKOFF:
-        break;
+        return GameStage::KICKOFF;
 
     case GameStage::KIKCOFF_EVENT:
-        break;
+        return GameStage::KIKCOFF_EVENT;
 
     case GameStage::TURN:
-        break;
+        return GameStage::TURN;
 
     
     //TODO: Handle error
     default:
         break;
     }
+}
+
+BoardTensor Game::resolveAction(Action action) {
+    BoardTensor currentState = getBoard().getCurrentGameState();
+    board_.updateBoardState(currentState, action);
 }
