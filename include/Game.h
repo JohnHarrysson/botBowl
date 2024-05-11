@@ -9,14 +9,16 @@
 class Game {
 
 public:
-    Game(Agent homeAgent, Agent awayAgent, Board board, CircularBuffer<BoardTensor> gameStateBuffer) : homeAgent_(homeAgent), awayAgent_(awayAgent), board_(board), gameStateBuffer_(gameStateBuffer) {}
+    Game(Agent homeAgent, Agent awayAgent, Board board, CircularBuffer<BoardTensor> gameStateBuffer) : homeAgent_(homeAgent), awayAgent_(awayAgent), board_(board), gameStateBuffer_(gameStateBuffer), {}
     ~Game() {}
 
-    Agent &getHomeAgentReference() { return homeAgent_; }
-    Agent &getAwayAgentReference() { return awayAgent_; }
+    const Agent &getHomeAgentReference() { return homeAgent_; }
+    const Agent &getAwayAgentReference() { return awayAgent_; }
 
     Agent getHomeAgent() { return homeAgent_; }
     Agent getAwayAgent() { return awayAgent_; }
+    const Agent getCurrentAgent() const { return *currentAgent_; }
+    void setCurrentAgent(const Agent &newCurrentAgent) { currentAgent_ = &newCurrentAgent; }
     const Board getBoard() const { return board_; }
     CircularBuffer<BoardTensor> &getGameStateBufferReference() { return gameStateBuffer_; }
 
@@ -28,6 +30,7 @@ public:
 private:
     Agent homeAgent_;
     Agent awayAgent_;
+    const Agent* currentAgent_;
     Board board_;
     CircularBuffer<BoardTensor> gameStateBuffer_;
     std::vector<GameStage> previousStages_;

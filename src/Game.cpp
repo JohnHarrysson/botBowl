@@ -45,11 +45,9 @@ GameStage Game::handleStageAndReturnNextStage(GameStage currentStage) {
 
 //TODO::
     case GameStage::HOME_SETUP: {
-        Agent &agent = getHomeAgentReference();
         BoardTensor currentGameState = getBoard().getCurrentGameState();
 
         Event pitchSetup(EventType::PITCH_SETUP);
-        Action setupAction = agent.act(pitchSetup, currentGameState);
         BoardTensor newGameState = resolveAction(setupAction);
         getBoard().storeGameState(getGameStateBufferReference(), newGameState);
 

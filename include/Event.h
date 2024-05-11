@@ -31,7 +31,7 @@ public:
 
 class CoinTossEvent : public Event {
     public:
-        CoinTossEvent(Agent& homeAgent, Agent& awayAgent) : Event(EventType::COIN_TOSS), homeAgent_(homeAgent), awayAgent_(awayAgent) {
+        CoinTossEvent(const Agent& homeAgent, const Agent& awayAgent) : Event(EventType::COIN_TOSS), homeAgent_(homeAgent), awayAgent_(awayAgent) {
             Nuffle randomGenerator;
             randomGenerator.getRandomBool() ? isHomeTeamWin_ = true : isHomeTeamWin_ = false;
         }
