@@ -12,11 +12,6 @@ GameStage Game::handleStageAndReturnNextStage(GameStage currentStage) {
         return homeTeamValue <= awayTeamValue ? GameStage::HOME_INDUCEMENT : GameStage::AWAY_INDUCEMENT;
     }
     case GameStage::HOME_INDUCEMENT: {
-        Agent &agent = getHomeAgentReference();
-        BoardTensor currentGameState = getBoard().getCurrentGameState();
-
-        Event coinToss(EventType::COIN_TOSS);
-        agent.act(coinToss, currentGameState);
         setPreviousStage(GameStage::HOME_INDUCEMENT);
 
         for (GameStage gameStage : getPreviousStages()) {
@@ -28,15 +23,10 @@ GameStage Game::handleStageAndReturnNextStage(GameStage currentStage) {
         return GameStage::AWAY_INDUCEMENT;
     }
     case GameStage::AWAY_INDUCEMENT: {
-        Agent &agent = getHomeAgentReference();
-        BoardTensor currentGameState = getBoard().getCurrentGameState();
-
-        Event coinToss(EventType::COIN_TOSS);
-        agent.act(coinToss, currentGameState);
         setPreviousStage(GameStage::AWAY_INDUCEMENT);
 
         for (GameStage gameStage : getPreviousStages()) {
-            if (GameStage::AWAY_INDUCEMENT == gameStage) {
+            if (GameStage::HOME_INDUCEMENT == gameStage) {
                 return GameStage::COIN_TOSS;
             }
         }
@@ -44,8 +34,14 @@ GameStage Game::handleStageAndReturnNextStage(GameStage currentStage) {
         return GameStage::AWAY_INDUCEMENT;
     }
 
-    case GameStage::COIN_TOSS:
-        return GameStage::COIN_TOSS;
+    case GameStage::COIN_TOSS: {
+        CoinTossEvent coinToss(getHomeAgentReference(), getAwayAgentReference());
+
+        BoardTensor currentGameState = getBoard().getCurrentGameState();
+
+        std::vector<Action> actionSet = coinToss.pollForActions();
+
+    }
 
 //TODO::
     case GameStage::HOME_SETUP: {

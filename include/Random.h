@@ -13,6 +13,8 @@ class Nuffle {
             std::uniform_int_distribution<int> distribution(min, max);
             return distribution(rng);
         }
+
+        bool getRandomBool() { return static_cast<bool> (getRandomIndex(0, 1)); }
 };
 
 #endif

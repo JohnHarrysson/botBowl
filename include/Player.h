@@ -20,7 +20,6 @@ public:
     const int getArmor() const { return playerStats_.armor; }
     const int getMovement() const { return playerStats_.movement; }
     const int getPlayerValue() const { return playerStats_.value; }
-
     const Coordinates getCoordinates() const { return coordinates_; }
 
     void setStrength(int strength) { playerStats_.strength = strength; }
