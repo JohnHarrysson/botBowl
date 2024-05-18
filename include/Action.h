@@ -12,24 +12,30 @@ enum class ActionType {
     USE_SKILL,
     FOUL,
     SET_POSITION,
-    COIN_FLIP
+    COIN_FLIP_CHOOSE_SELF,
+    COIN_FLIP_CHOOSE_OPPONENT
 };
 
 class Action
 {
 private:
-    const Agent& agent_;
+    Agent& agent_;
     ActionType type_;
     double successProbability_;
-    virtual double calculateSuccessProbability();
     bool actionSuccessfulResult_;
 
-public:
-    Action(ActionType type, const Agent& agent) : type_(type), agent_(agent) {}
+protected:
+    Action(ActionType type, Agent& agent) : type_(type), agent_(agent) {}
     ~Action() {}
+
+    virtual double calculateSuccessProbability();
+    double getSuccessProbability() { return successProbability_; }
+    void setSuccessProbability(double probability) { successProbability_ = probability; }
 
     void setResult(bool result) { actionSuccessfulResult_ = result; }
     bool getResult() { return actionSuccessfulResult_; }
+
+    Agent& getAgent() { return agent_; }
 };
 
 class BlockAction : public Action
@@ -45,17 +51,19 @@ public:
     ~BlockAction() {}
 };
 
-class CoinflipDecisionAction : public Action
+class SelfSetupAction : public Action
 {
     private:
         double calculateSuccessProbability() { return 1.0; }
 
     public:
-        CoinflipDecisionAction(const Agent& agent) : Action(ActionType::COIN_FLIP, agent) {}
-        ~CoinflipDecisionAction() {}
+        SelfSetupAction(const Agent& agent) : Action(ActionType::COIN_FLIP_CHOOSE_SELF, agent) {
+            generateActionResultEvent();
+        }
+        ~SelfSetupAction() {}
 
-        void makeHomeOrAwaySetup() { 
-            setResult(true); 
+        Event generateActionResultEvent() { 
+            Event 
         }
 
 };

@@ -151,6 +151,7 @@ CMakeFiles/BotBowl.dir/src/Action.cpp.o: \
  /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_set.h \
  /usr/include/c++/11/bits/stl_multiset.h \
  /home/john/Documents/botbowl/include/Aliases.h \
+ /home/john/Documents/botbowl/include/Action.h \
  /home/john/Documents/botbowl/include/GameStateBuffer.h \
  /usr/include/c++/11/cstddef /home/john/Documents/botbowl/include/Agent.h \
  /home/john/Documents/botbowl/include/Team.h \
@@ -177,7 +178,6 @@ CMakeFiles/BotBowl.dir/src/Action.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/john/Documents/botbowl/include/Action.h \
  /home/john/Documents/botbowl/include/Random.h /usr/include/c++/11/random \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \

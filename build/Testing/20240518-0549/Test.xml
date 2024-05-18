@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-g++"
+	BuildStamp="20240518-0549-Experimental"
+	Name="Jarvis"
+	Generator="ctest-3.22.1"
+	CompilerName="/usr/bin/g++"
+	CompilerVersion="11.3.0"
+	OSName="Linux"
+	Hostname="Jarvis"
+	OSRelease="6.5.0-28-generic"
+	OSVersion="#29~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Apr  4 14:39:20 UTC 2"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="140"
+	ProcessorCacheSize="12288"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="31808"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="4099.97"
+	>
+	<Testing>
+		<StartDateTime>May 18 07:49 CEST</StartDateTime>
+		<StartTestTime>1716011395</StartTestTime>
+		<TestList/>
+		<EndDateTime>May 18 07:49 CEST</EndDateTime>
+		<EndTestTime>1716011395</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

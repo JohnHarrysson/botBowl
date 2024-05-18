@@ -21,8 +21,8 @@ public:
     Event(EventType eventType) : eventType_(eventType) {}
     virtual ~Event() {}
 
-    virtual std::vector<Action> pollForActions(BoardTensor currentGameState);
-    virtual std::vector<Action> pollForActions();
+    virtual ActionVector pollForActions(BoardTensor currentGameState);
+    virtual ActionVector pollForActions();
     EventType getEventType() { return eventType_; }
 
 
@@ -31,25 +31,21 @@ public:
 
 class CoinTossEvent : public Event {
     public:
-        CoinTossEvent(const Agent& homeAgent, const Agent& awayAgent) : Event(EventType::COIN_TOSS), homeAgent_(homeAgent), awayAgent_(awayAgent) {
+        CoinTossEvent() : Event(EventType::COIN_TOSS) {
             Nuffle randomGenerator;
             randomGenerator.getRandomBool() ? isHomeTeamWin_ = true : isHomeTeamWin_ = false;
         }
         ~CoinTossEvent() {}
 
         const bool getIsHomeTeamWin() const { return isHomeTeamWin_; }
-        const Agent& getHomeAgent() const { return homeAgent_; }
-        const Agent& getAwayAgent() const { return awayAgent_; }
 
-        std::vector<Action> pollForActions(BoardTensor boardStage) override { return pollForActions(); }
-        std::vector<Action> pollForActions() override {
-            return getIsHomeTeamWin() ? std::vector<Action> { CoinflipDecisionAction(getHomeAgent()) } : std::vector<Action> { CoinflipDecisionAction(getAwayAgent()) };
+        ActionVector pollForActions(BoardTensor boardStage) override { return pollForActions(); }
+        ActionVector pollForActions() override {
+            return getIsHomeTeamWin() ? ActionVector { SelfSetupAction(getHomeAgent()), OpponentSetupAction(getHomeAgent()) } : ActionVector { SelfSetupAction(getAwayAgent()), OpponentSetupAction(getAwayAgent()) };
         }
 
     private:
         bool isHomeTeamWin_;
-        const Agent& homeAgent_;
-        const Agent& awayAgent_;
 
 };
 

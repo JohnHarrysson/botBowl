@@ -39,7 +39,7 @@ GameStage Game::handleStageAndReturnNextStage(GameStage currentStage) {
 
         BoardTensor currentGameState = getBoard().getCurrentGameState();
 
-        std::vector<Action> actionSet = coinToss.pollForActions();
+        ActionVector actionVector = coinToss.pollForActions();
 
     }
 

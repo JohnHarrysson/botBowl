@@ -12,13 +12,15 @@ public:
     Game(Agent homeAgent, Agent awayAgent, Board board, CircularBuffer<BoardTensor> gameStateBuffer) : homeAgent_(homeAgent), awayAgent_(awayAgent), board_(board), gameStateBuffer_(gameStateBuffer), {}
     ~Game() {}
 
-    const Agent &getHomeAgentReference() { return homeAgent_; }
-    const Agent &getAwayAgentReference() { return awayAgent_; }
+    Agent &getHomeAgentReference() { return homeAgent_; }
+    Agent &getAwayAgentReference() { return awayAgent_; }
 
     Agent getHomeAgent() { return homeAgent_; }
     Agent getAwayAgent() { return awayAgent_; }
-    const Agent getCurrentAgent() const { return *currentAgent_; }
-    void setCurrentAgent(const Agent &newCurrentAgent) { currentAgent_ = &newCurrentAgent; }
+    Agent& getCurrentPlayingAgent() { 
+        return getHomeAgentReference().getCurrentPlayer()
+    }
+
     const Board getBoard() const { return board_; }
     CircularBuffer<BoardTensor> &getGameStateBufferReference() { return gameStateBuffer_; }
 
